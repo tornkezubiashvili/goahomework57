@@ -1,0 +1,22 @@
+.main{
+    width: 700px;
+    height: 600px;
+    border: 2px solid red;
+    align-content: center;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 150px 150px 150px;
+    justify-content: center;
+    
+}
+.chaild{
+    background-color: green;;
+}
+.div2{
+    background-color: green;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}

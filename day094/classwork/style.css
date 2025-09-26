@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 137px;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+}
+
+header div {
+    display: flex;
+    gap: 20px;
+}
+
+.header-button1 {
+    border: none;
+    background-color: white;
+    color: #494949;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+}
+
+.header-button2 {
+    width: 108px;
+    height: 48px;
+    color: #003478;
+    border: 1px solid #003478;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menu {
+    display: none;
+}
+
+.section1 {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    height: 100vh;
+    position: relative;
+
+}
+
+.section1-div1 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    font-family: "Orbitron", sans-serif;
+    padding-left: 139px;
+    gap: 100px;
+    bottom: 190px;
+}
+
+.section1-div1 h1 {
+    font-size: 72px;
+    font-weight: 300;
+    max-width: 700px;
+    color: rgb(7, 80, 159);
+    text-transform: uppercase;
+
+}
+
+.section1-div1 h1 span {
+    color: rgb(251, 170, 12);
+    font-weight: 700;
+}
+
+.section1-div1 p {
+    font-size: 50px;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+}
+
+.section1-div1 p span {
+    font-size: 25px;
+}
+
+.buuton-div {
+    display: flex;
+    font-family: "Orbitron", sans-serif;
+    gap: 0px;
+    margin-top: 40px;
+}
+
+.section1-button1 {
+    width: 200px;
+    height: 70px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #003478;
+    color: white;
+    border: none;
+}
+
+.section1-button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 195px;
+    height: 70px;
+    border: none;
+    background-color: white;
+}
+
+.section1-button2 div {
+    border-radius: 50%;
+    background-color: #003478;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.two-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+}
+
+.two-line {
+    top: 50%;
+}
+
+.line {
+    background-color: #303231;
+    width: 100%;
+    height: 60px;
+}
+
+.line2 {
+    height: 64px;
+}
+
+.car {
+    position: absolute;
+    top: 16.9%;
+    right: -610px;
+}
+
+.section2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #303231;
+}
+
+.section2 h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 400;
+    font-family: "Sansation", sans-serif;
+    padding: 23px 30px;
+}
+
+.section3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: "Inter", sans-serif;
+    padding: 30px 180px;
+}
+
+.section3-title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #303231;
+}
+
+.section3-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 70px 100px;
+    row-gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section3 hr {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section3 .line {
+    width: 211px;
+    height: 1px;
+    background-color: black;
+    transform: rotate(90deg);
+    opacity: 30%;
+}
+
+.section3-info {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    box-shadow: 0.11px 0.11px 0.23px 0.23px black;
+}
+
+.nuumber {
+    width: 48px;
+    height: 48px;
+    background-color: #5046C7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nuumber h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.section3-info h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #233443;
+}
+
+.section3-info p {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 253px;
+}
+
+.section3-info span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #FF6645;
+}
+
+.section4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    padding: 30px 180px;
+}
+
+.section4 button {
+    width: 274px;
+    height: 54px;
+    background-color: #003478;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+}
+
+.section4 h3 {
+    color: #0276B3;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: underline solid #0276B3;
+}
+
+.section4-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 50px;
+
+}
+
+.section4-div {
+    width: 275px;
+    height: 142px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0.2px 0.2px 0.23px 0.23px black;
+}
+
+.section4-div h2 {
+    color: #233443;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section4-div h1 {
+    color: #333333;
+    font-size: 52px;
+    font-weight: 400;
+}
+
+.section5 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 180px;
+    gap: 80px;
+}
+
+.section5-title {
+    max-width: 1119px;
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.section5-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.section5-main2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.section5-main2 h2 {
+    font-family: "Sansation", sans-serif;
+    color: #303231;
+    font-size: 36px;
+    font-weight: 400;
+
+}
+
+.section5-main2 p {
+    color: #333333;
+    max-width: 512px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+}
+
+.section5-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section5-div {
+    display: flex;
+    gap: 20px;
+}
+
+.section5-div p {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 440px;
+}
+
+
+@media (max-width: 1480px) {
+    .section1-div1 {
+        gap: 200px;
+        bottom: 130px;
+
+    }
+
+    .car {
+        width: 1200px;
+    }
+
+    .two-line {
+        top: 46%;
+        gap: 18.8px;
+    }
+
+    .line {
+        height: 53px;
+    }
+
+    .line2 {
+        height: 56px;
+    }
+
+    .section3 .line {
+        display: none;
+    }
+
+    .section3-main {
+        gap: 80px;
+    }
+
+    .section5 {
+        padding: 0px 160px;
+    }
+
+    .section5-main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+
+    }
+}
+
+@media (max-width: 1170px) {
+    header {
+        padding: 36px 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        display: block;
+        width: 40px;
+    }
+
+    nav,
+    header div {
+        display: none;
+    }
+
+    .section1-div1 {
+        padding-left: 50px;
+    }
+
+    .buuton-div {
+        margin-top: 80px;
+    }
+
+    .car {
+        width: 1000px;
+        right: -500px;
+        top: 21.6%;
+    }
+
+    .two-line {
+        top: 46%;
+        gap: 13px;
+    }
+
+    .line {
+        height: 45px;
+    }
+
+    .line2 {
+        height: 47px;
+    }
+
+    .section1-div1 {
+        top: 76px;
+    }
+
+    .section1-div1 h1 {
+        font-size: 60px;
+    }
+
+    .section1-div1 p {
+        font-size: 27px;
+    }
+
+    .section3 {
+        padding: 30px 30px;
+    }
+
+    .section3-info {
+        width: 200px;
+    }
+
+    .section4 {
+        padding: 30px 30px;
+    }
+
+    .section5 {
+        padding: 30px 0px;
+        padding-left: 80px;
+    }
+
+    .Engine {
+        width: 500px;
+    }
+
+}
+
+@media (max-width: 630px) {
+    .car {
+        width: 700px;
+        right: -350px;
+        top: 16%;
+
+    }
+
+    .two-line {
+        top: 33%;
+        gap: 10px;
+    }
+
+    .line {
+        height: 32px;
+    }
+
+    .line2 {
+        height: 32.7px;
+    }
+
+    .section1-div1 {
+        gap: 127px;
+    }
+
+    .section1-div1 h1 {
+        font-size: 40px;
+    }
+
+
+    .section1-div1 p {
+        font-size: 22px;
+    }
+
+    .section1-div1 p span {
+        font-size: 18px;
+    }
+
+    .buuton-div {
+        align-items: center;
+        gap: 15px;
+    }
+
+    .section1-button1 {
+        width: 130px;
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .section1-button2 {
+        width: 140px;
+        gap: 10px;
+    }
+
+    .section3-info p {
+        max-width: 200px;
+    }
+
+    .Engine {
+        width: 400px;
+    }
+
+    .section5-div p {
+        max-width: 300px;
+    }
+    .section5-div img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 490px) {
+    header {
+        padding: 36px 30px;
+    }
+
+    .car {
+        width: 600px;
+        right: -280px;
+        top: 19%;
+    }
+
+    .two-line {
+        top: 33.5%;
+        gap: 8px;
+    }
+
+    .line {
+        height: 28px;
+    }
+
+    .line2 {
+        height: 29px;
+    }
+
+    .section1-div1 {
+        top: 110px;
+        padding-left: 30px;
+    }
+
+    .section1-div1 h1 {
+        font-size: 30px;
+    }
+
+
+    .section1-div1 p {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+
+    }
+
+    .section1-div1 p span {
+        font-size: 13px;
+    }
+
+    .section2 h1 {
+        font-size: 30px;
+        display: flex;
+        text-align: center;
+    }
+
+    .section5 {
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+
+    .Engine {
+        width: 300px;
+    }
+}

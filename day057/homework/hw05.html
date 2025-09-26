@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Design</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0ecfa;
+      color: #333;
+    }
+
+    header {
+      background: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border-radius: 0 0 16px 16px;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
+
+    .btn-started {
+      padding: 10px 20px;
+      background: #6a0dad;
+      color: white;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px;
+      background: white;
+      margin: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #2c2c2c;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .hero-text .btn {
+      padding: 12px 24px;
+      background: #6a0dad;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .hero-img img {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .hero-img {
+        margin-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">YOUR <strong>WEBSITE</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About us</a>
+      <a href="#">Work</a>
+      <a href="#">Info</a>
+      <a href="#" class="btn-started">Get Started</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Website Design</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget libero feugiat, faucibus libero id, scelerisque quam.</p>
+      <a href="#" class="btn">Button name</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://media.istockphoto.com/id/843408508/photo/photography-camera-lens-concept.jpg?s=612x612&w=0&k=20&c=-tm5TKrPDMakrT1vcOE-4Rlyj-iBVdzKuX4viFkd7Vo=" alt="Website design illustration">
+    </div>
+  </section>
+</body>
+</html>

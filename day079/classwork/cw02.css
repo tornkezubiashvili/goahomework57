@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    height: 100vh;
+    
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parant{
+    width: 650px;
+    height: 550px;
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: (repeat,auto-fit,minmax( 100px,1fr));
+    grid-template-rows: (repeat,auto-fit,minmax( 75px,1fr));
+    gap: 20px;
+
+}
+.Child{
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .main-div {
+      width: 800px;
+      height: 600px;
+      background-color: green;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 50px auto;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .main-div img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .main-div p {
+      font-family: 'Indie Flower', cursive;
+      font-size: 20px;
+      color: white;
+      position: relative;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+    .main-div p::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+      border-bottom: 2px dotted violet;
+    }
+
+    .main-div button {
+      background-color: blue;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .main-div button:hover {
+      background-color: darkblue;
+    }
+  </style>
+</head>
+<body>
+    <div class="main-div">
+    <img src="https://rewildingeurope.com/wp-content/uploads/2021/11/RS1765_SBA_2011-07-30_070027-low-e1646985237178.jpg" alt="img">
+    <p>hello world</p>
+    <button>klick me</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Pacifico&family=Permanent+Marker&family=Satisfy&family=Tangerine:wght@400;700&family=WindSong:wght@400;500&family=Young+Serif&family=Zilla+Slab+Highlight:wght@400;700&display=swap');
+
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4e8dd;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: "Young Serif", serif;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.Ingredients{
+    font-family: "Outfit", sans-serif;
+}
+
+.prep-time {
+  background-color: #fff0f6;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.prep-time h3 {
+  margin: 0 0 10px;
+  color: #7b1f4c;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+.ingredients, .instructions {
+  margin-bottom: 30px;
+}
+
+.instructions li {
+  margin-bottom: 12px;
+}
+
+.nutrition {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.nutrition th,
+.nutrition td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nutrition th {
+  color: #7b1f4c;
+}

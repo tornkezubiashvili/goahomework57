@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fb;
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d2f41;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: #666;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-border-top {
+  height: 5px;
+  border-radius: 12px 12px 0 0;
+  margin: -25px -25px 15px;
+}
+
+/* Specific colors for cards */
+.team-builder { background-color: #ff5b5b; }
+.supervisor    { background-color: #00cfc1; }
+.calculator    { background-color: #4292f4; }
+.karma         { background-color: #f8b133; }
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #2d2f41;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+}

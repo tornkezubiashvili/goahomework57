@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>მზის სისტემა - ანიმაცია</title>
+  <style>
+    body {
+      background-color: #1e1136;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .solar-system {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sun {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, #ffcc00, #ff6600);
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .orbit {
+      position: absolute;
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: rotate linear infinite;
+    }
+
+    .planet {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .orbit1 {
+      width: 80px;
+      height: 80px;
+      animation-duration: 2s;
+    }
+    .orbit2 {
+      width: 120px;
+      height: 120px;
+      animation-duration: 4s;
+    }
+    .orbit3 {
+      width: 160px;
+      height: 160px;
+      animation-duration: 6s;
+    }
+    .orbit4 {
+      width: 200px;
+      height: 200px;
+      animation-duration: 8s;
+    }
+    .orbit5 {
+      width: 240px;
+      height: 240px;
+      animation-duration: 10s;
+    }
+    .orbit1 .planet {
+      background: #ccc;
+      left: 100%;
+      top: 50%;
+    }
+
+    .orbit2 .planet {
+      background: red;
+      left: 100%;
+      top: 50%;
+    }
+
+    .orbit3 .planet {
+      background: orange;
+      left: 100%;
+      top: 50%;
+    }
+
+    .orbit4 .planet {
+      background: lightblue;
+      left: 100%;
+      top: 50%;
+    }
+
+    .orbit5 .planet {
+      background: blue;
+      left: 100%;
+      top: 50%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="solar-system">
+    <div class="sun"></div>
+    <div class="orbit orbit1"><div class="planet"></div></div>
+    <div class="orbit orbit2"><div class="planet"></div></div>
+    <div class="orbit orbit3"><div class="planet"></div></div>
+    <div class="orbit orbit4"><div class="planet"></div></div>
+    <div class="orbit orbit5"><div class="planet"></div></div>
+  </div>
+</body>
+</html>

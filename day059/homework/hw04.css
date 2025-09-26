@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #fff;
+  }
+  
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+  }
+  
+  .sign-in-button {
+    padding: 0.4rem 1rem;
+    border: 1px solid #0a66c2;
+    border-radius: 20px;
+    color: #0a66c2;
+    text-decoration: none;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    min-height: calc(100vh - 80px);
+  }
+  
+  .left {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .left h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #b24000;
+  }
+  
+  .left h1 span {
+    color: #b24000;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .forgot {
+    font-size: 0.85rem;
+    color: #0a66c2;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .sign-in {
+    background-color: #0a66c2;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 1rem 0;
+    color: #888;
+  }
+  
+  .google-button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #888;
+    padding: 0.8rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .join-now {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .join-now a {
+    color: #0a66c2;
+    text-decoration: none;
+  }
+  
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .illustration {
+    width: 80%;
+    max-width: 500px;
+  }

@@ -1,0 +1,76 @@
+h1{
+    font-size: 50px;
+    color: white;
+}
+p{
+    font-size: 20px;
+    color: white;
+}
+.box{
+    width: 1400px;
+    height:1600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 50px;
+    position: absolute;
+    left: 250px;
+    top: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.Korea{
+    background-image: url('https://c1.wallpaperflare.com/preview/261/1002/366/neonwave-outrun-vaporwave-cyberpunk.jpg');
+    background: cover;
+    width: 400px;
+    height: 400px;
+    color: red;
+    border-radius: 50px;
+    text-align: center;
+}
+.Tbilisi{
+    background-image: url('https://media.istockphoto.com/id/1406203403/photo/panoramic-of-tbilisi-city-at-sunrise-in-georgia.jpg?s=612x612&w=0&k=20&c=qJJb4JfmjOEx7b52IEq44654NWbjrPClRBUkO0PKf68=');
+    background: cover;
+    width: 400px;
+    height: 400px;
+    color: red;
+    border-radius: 50px;
+    text-align: center;
+}
+.NewYork{
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/556/199/617/new-york-city-night-city-wallpaper-preview.jpg');
+    background: cover;
+    width: 400px;
+    height: 400px;
+    color: red;
+    border-radius: 50px;
+    text-align: center;
+}
+.Paris{
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/649/881/233/5bd215b8a3cbe-wallpaper-preview.jpg');
+    background: cover;
+    width: 400px;
+    height: 400px;
+    color: red;
+    border-radius: 50px;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+.Tokyo{
+    background-image: url('https://img.freepik.com/free-photo/aerial-view-tokyo-cityscape-with-fuji-mountain-japan_335224-148.jpg');
+    background: cover;
+    width: 400px;
+    height: 400px;
+    color: red;
+    border-radius: 50px;
+    text-align: center;
+}
+.Dubai{
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/286/992/948/dubai-night-photo-taken-from-the-palm-island-jumeirah-united-arab-emirates-hd-desktop-wallpaper-for-your-computer-3840%C3%972400-wallpaper-preview.jpg');
+    background: cover;
+    width: 400px;
+    height: 400px;
+    color: red;
+    border-radius: 50px;
+    text-align: center;
+}

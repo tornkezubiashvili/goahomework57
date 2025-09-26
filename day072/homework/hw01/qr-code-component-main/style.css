@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Pacifico&family=Permanent+Marker&family=Satisfy&family=Tangerine:wght@400;700&family=WindSong:wght@400;500&family=Young+Serif&family=Zilla+Slab+Highlight:wght@400;700&display=swap');
+
+*{
+    font-family: "Outfit", sans-serif;
+}
+body{
+    background-color: #d5e1ef;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    width: 245px;
+    height: 380px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    left: 800px;
+    top: 200px;
+}
+img{
+    width: 219px;
+    height: 216px;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+.min-heder{
+    position: relative;
+    font-weight: 700;
+    color: #21304c;
+}
+.heder1{
+    position: absolute;
+    left: 23px;
+}
+.heder2{
+    position: absolute;
+    top: 23px;
+    left: 18px;
+}
+.p-box{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: hsl(216, 15%, 48%);
+}
+.p1{
+    position: relative;
+    left: 26px;
+    top: 62px;
+}
+.p2{
+    position: relative;
+    left: 18px;
+    top: 38px;
+}
+.p3{
+    position: relative;
+    left: 84px;
+    top: 14px;
+}

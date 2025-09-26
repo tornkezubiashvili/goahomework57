@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩემი პროფილი</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            z-index: 1000; 
+        }
+        .profile {
+            position: relative;
+            margin-top: 80px; 
+            display: flex;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .profile-image {
+            position: relative;
+            margin-right: 20px;
+        }
+        .profile-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .notification-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+            color: white;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .profile-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .profile-details h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .profile-details p {
+            font-size: 16px;
+            color: #555;
+        }
+        .static-text {
+            position: static;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #FFF;
+            color: #333;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>ჩემი პროფილი</h1>
+    </header>
+    <section class="profile">
+        <div class="profile-image">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <span class="notification-badge">3</span> 
+        </div>
+        <div class="profile-details">
+            <h2>თორნიკე</h2>
+            <p>თორნიკე არის პროფესიონალი პროგრამისტი, რომელიც ერკვევა ვებ დეველოპმენტში და აქვს უამრავი გამოცდილება სხვადასხვა ტექნოლოგიებში.</p>
+        </div>
+    </section>
+    <div class="static-text">
+    </div>
+</body>
+</html>

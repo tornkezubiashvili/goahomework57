@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>მზის სისტემა </title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      height: 100vh;
+      position: relative;
+    }
+    .sun {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #ffcc00, #ff9900);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 100px;
+      left: 0;
+      animation: bounce 6s ease-in forwards;
+    }
+    .bin {
+      width: 100px;
+      height: 120px;
+      background: #555;
+      position: absolute;
+      bottom: 0;
+      right: 50px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .bin::before {
+      content: "";
+      width: 80%;
+      height: 10px;
+      background: #333;
+      position: absolute;
+      top: -10px;
+      border-radius: 5px;
+    }
+    @keyframes bounce {
+      0%   { bottom: 100px; left: 0; }
+      20%  { bottom: 200px; left: 150px; }
+      40%  { bottom: 120px; left: 300px; }
+      60%  { bottom: 180px; left: 450px; }
+      80%  { bottom: 100px; left: 600px; }
+      100% { bottom: 40px; left: calc(100% - 80px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sun"></div>
+  <div class="bin"></div>
+</body>
+</html>

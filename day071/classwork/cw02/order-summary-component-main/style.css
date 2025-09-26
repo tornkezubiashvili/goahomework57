@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e0e7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 350px;
+  text-align: center;
+}
+
+.top-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 30px 25px;
+}
+
+h2 {
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.plan-box {
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.plan-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.plan-details {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.plan-details strong {
+  display: block;
+  color: #111827;
+}
+
+.plan-details span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.change-link {
+  color: #4f46e5;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.payment-button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+  transition: background 0.3s ease;
+}
+
+.payment-button:hover {
+  background-color: #4338ca;
+}
+
+.cancel-link {
+  display: block;
+  color: #6b7280;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cancel-link:hover {
+  text-decoration: underline;
+}

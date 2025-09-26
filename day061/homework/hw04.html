@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .box{
+           width: 700px;
+           height: 10px;
+           background-color: grey;
+           border-radius: 50px;
+           position: absolute;
+           top: 800px;
+           left: 800px;
+           
+        }
+        .loading_bar{
+            background-color: white;
+            border-radius: 50px;
+            width: 30px;
+            height: 10px;
+            animation-name: loading; 
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes loading{
+            0% {
+              width: 0;
+            }
+            50% {
+              width: 350px;
+            }
+            100% {
+                width: 700px;
+            }
+        } 
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            position: absolute;
+           top: 600px;
+           left: 1100px;
+        }  
+
+    </style>
+</head>
+<body>
+    <img src="./hw04.png" alt="img">
+    <div class="box">
+        <div class="loading_bar"></div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    height: 56px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+nav h1 {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 400px;
+}
+
+.point {
+    width: 5px;
+    height: 5px;
+    background-color: #1343ff;
+    border-radius: 50%;
+    position: relative;
+    left: -76px;
+    bottom: 6px;
+    margin-left: 5px;
+}
+
+.a-box {
+    display: flex;
+    gap: 30px;
+    margin-left: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.img-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.instagram {
+    width: 30px;
+    height: 30px;
+}
+
+.search,
+.shop {
+    width: 50px;
+    height: 50px;
+}
+
+main {
+    width: 100%;
+    height: 554px;
+    background-color: #f0efeb;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.main-div1{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 191px;
+    margin-top: 90px;
+}
+.main-div1 h1{
+    font-size: 60px;
+}
+.main-div1 p{
+    font-size: 25px;
+}
+.main-div1 button{
+    width: 8%;
+    height: 70px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.div1-img1{
+    height: 100%;
+    width: 35%;
+    margin-left: 850px;
+    position: relative;
+    bottom: 555px;
+}
+.main-div2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1180px;
+    position: relative;
+    bottom: 500px;
+}
+.main-div2 h1{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+.main-pbox{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 45px;
+}
+.Available{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 45px;
+}
+.Our-best{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -400px;
+}
+.main-div3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 80px;
+}
+.div3-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 280px;
+    margin-top: 60px;
+    margin-right: 40px;
+}
+.Thalby1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+.history1 p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.Add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 25px;
+    text-decoration: underline solid #9f9f9f;
+}
+
+
+.main-div4{
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 1525px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    margin-top: 250px;
+}
+.div4-div1 h1{
+    font-size: 40px;
+}
+.div4-div1 p{
+    font-size: 35px;
+}
+.div4-div1 {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+.div4-img{
+    padding: 76px 0px 55px 0px;
+}
+.div4-div1 h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-decoration: underline solid #9f9f9f;
+
+}
+
+.main-div5{
+    background-color: #e0e0e0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+}
+
+.main-div6{
+    background-color: #f0f0f0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+}
+
+
+
+
+
+

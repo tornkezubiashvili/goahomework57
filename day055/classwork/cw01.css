@@ -1,0 +1,14 @@
+.container1{
+    width: 500px;
+    height: 500px;
+    border: 2px solid red;
+    left: 400px;
+    position: absolute;
+   
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA2oASENe7GdCli1KnAl6cnDnuD6lGT60txQ&s');
+    background: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    color: red;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+     .text1 {
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    .text1:hover {
+      text-decoration: line-through;
+      text-decoration-color: black;
+    }
+
+    .text1:active,
+    .text1:focus {
+      text-decoration: line-through;
+      text-decoration-color: red;
+    }
+    .text2 {
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    .text2:hover {
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+    .text2:active,
+    .text2:focus {
+      border-top: 2px solid blue;
+      border-bottom: 2px solid blue;
+      text-decoration: line-through;
+      text-decoration-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <p class="text1">პირველი ტექსტი</p><br><br>
+  <p class="text2">მეორე ტექსტი</p>
+</body>
+</html>

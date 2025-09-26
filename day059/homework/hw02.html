@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition მაგალითი</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .example-button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 8px;
+      
+      transition-property: background-color, transform;
+      transition-duration: 0.4s;
+      transition-timing-function: ease-in-out;
+    }
+    .example-button:hover {
+      background-color: #2ecc71;
+      transform: scale(1.1);
+    }
+    .explanation {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .explanation h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .explanation p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Transition მაგალითი</h1>
+  <div style="text-align: center;">
+    <button class="example-button">მომინახე!</button>
+  </div>
+  <div class="explanation">
+    <h2>რა არის Transition?</h2>
+    <p><strong>Transition</strong> იძლევა საშუალებას ელემენტის თვისებების ცვლილება მოხდეს გლუვად, ნაცვლად მყისიერი ცვლილებისა.</p>
+    <h2>Transition-ის ქვეკუთვნილებები:</h2>
+    <p><strong>transition-property:</strong> განსაზღვრავს, რომელი CSS თვისება უნდა შეიცვალოს გლუვად (მაგალითად, <code>background-color</code>, <code>transform</code>).</p>
+    <p><strong>transition-duration:</strong> განსაზღვრავს ცვლილების ხანგრძლივობას (მაგალითად, <code>0.4s</code>).</p>
+    <p><strong>transition-timing-function:</strong> განსაზღვრავს ცვლილების სიჩქარის ტიპს დროში (მაგალითად, <code>ease-in-out</code>).</p>
+    <h2>საბოლოო შედეგი:</h2>
+    <p>მაუსის მიყვანისას ღილაკი ფერს შეიცვლის და ზომაშიც გაიზრდება გლუვად და ელეგანტურად!</p>
+  </div>
+</body>
+</html>

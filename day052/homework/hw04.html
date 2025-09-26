@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    4)შექმენით ერთი დივი მიეცით სიგანე და სიმაღლე 400px,ასევე მიეცით ბორდერი შავი,ამ დივში შექმენით ორი დივი,
+    ამ ორი დივის სიმაღლე და სიგანე იყოს 50px,პირველ დივს მიეცით ფერი ლურჯი და მეორე დივს მიეცით ფერი წითელი,
+    ლურჯ დივს გაუწერეთ position relative და წითელ დივს მიეცით position absolute,ამ წითელ დივს უთარით left:20px,და ნახეთ შედეგი
+    <style>
+        .div1{
+            height: 400px;
+            width: 400px;
+            border: solid black;
+        }
+        .div2{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: absolute;
+            left: 20px;
+        }
+        .div3{
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2"></div>
+        <div class="div3"></div>
+    </div>
+</body>
+</html>

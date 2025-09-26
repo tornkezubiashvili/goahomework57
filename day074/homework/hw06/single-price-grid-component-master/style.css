@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@400..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Pacifico&family=Permanent+Marker&family=Satisfy&family=Tangerine:wght@400;700&family=WindSong:wght@400;500&family=Young+Serif&family=Zilla+Slab+Highlight:wght@400;700&display=swap');
+
+*{
+    font-family: "Karla", sans-serif;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #e4f0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background: white;
+  width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.top {
+  padding: 40px;
+  text-align: left;
+}
+
+.top h2 {
+  color: #2bb3b1;
+  margin: 0;
+}
+
+.guarantee {
+  color: #c0df34;
+  font-weight: bold;
+  margin: 20px 0 10px;
+}
+
+.description {
+  color: #9aa7bd;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bottom {
+  display: flex;
+  background: #2bb3b1;
+  color: white;
+}
+
+.subscription, .why-us {
+  width: 50%;
+  padding: 30px;
+}
+
+.subscription h3 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.amount {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.per {
+  font-size: 16px;
+  margin-left: 5px;
+  color: #d0f0f0;
+}
+
+.subscription p {
+  margin: 10px 0 20px;
+}
+
+.subscription button {
+  background: #c0df34;
+  border: none;
+  padding: 15px 0;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #003b3b;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.why-us ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+  color: #e0f7f7;
+}

@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #2ebf91, #136a8a);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #fff;
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card-header {
+  background: url('https://www.transparenttextures.com/patterns/squairy-light.png'), #3ccfcf;
+  height: 100px;
+  position: relative;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-body {
+  padding: 50px 20px 20px;
+}
+
+.card-body h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card-body h2 span {
+  color: gray;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.card-body p {
+  color: gray;
+  font-size: 14px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.card-footer div {
+  text-align: center;
+}
+
+.card-footer strong {
+  display: block;
+  font-size: 16px;
+}
+
+.card-footer span {
+  color: gray;
+  font-size: 12px;
+}

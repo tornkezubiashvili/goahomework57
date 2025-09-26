@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 400px;
+    margin: 50px auto;
+}
+.box {
+    width: 120px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 2px solid;
+}
+.red {
+    color: red;
+    border-color: red;
+}
+.blue {
+    color: blue;
+    border-color: blue;
+}

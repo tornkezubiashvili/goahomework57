@@ -1,0 +1,16 @@
+.CLS{
+    width: 800px;
+    height: 600px;
+    margin-left: 600px;
+    border: solid 5px red;
+    border-radius: 50%;
+    
+}
+.p{
+    font-size: 25px;
+    margin-left: 100px;
+}
+.video{
+    margin-right: -160px;
+    border: solid 5px rgb(36, 36, 140);
+}
