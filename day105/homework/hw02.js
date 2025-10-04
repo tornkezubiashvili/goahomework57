@@ -3,7 +3,7 @@
 
 
 function list(arr){
-    namelist = ["lado","nodari"]
+    let namelist = ["lado","nodari"]
     arr.push(namelist)
     console.log(arr)
 }

@@ -2,11 +2,13 @@
 //თუ რომელიმე მოსწავლის სახელი იწყება ასო 'გ' ზე მაშინ ასეთი მოსწავლის სახელი შეცვალეთ false მნიშვნელობით
 
 
-
-function list(arr){
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] ==)
+function list(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i][0] === "გ" || arr[i][0] ==="g" || arr[i][0] === "G") {
+            arr[i] = false; 
+        }
     }
+    console.log(arr)
 }
 
-list(["გიო","ავთო","gio"])
+list(["გიო", "ავთო", "gio", "Gio"])
