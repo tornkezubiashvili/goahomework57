@@ -13,7 +13,7 @@ function list(arr){
     }
     for(let n = 0; n < namelist.length;n++){
         if(namelist[n][0] === "ა"  || namelist[n][0] === "a" || namelist[n][0] === "A"){
-            namelist.splice(0,1)
+            namelist.splice(n,1)
         }
     }
 
