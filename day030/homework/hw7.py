@@ -7,4 +7,5 @@ while i < len(numbers):
     del_num = int(input("what do you want do delete: "))
     numbers.pop(del_num)
     
+    
 print(numbers)
