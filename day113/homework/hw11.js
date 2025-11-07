@@ -8,8 +8,8 @@ let phone = {
 phone.model = "Redmi"
 phone.price = 600
 
-phone.model = "Samsung"
-phone.price = 800
+phone.model2 = "Samsung"
+phone.price2 = 800
 
 
 console.log(Object.values(phone))
