@@ -5,8 +5,8 @@
 
 
 let movie = {
-    name : "...",
-    genre : "....",
+    name : "ზებუნებრივი",
+    genre : "დეტექტივი, საშინელებათა, ",
     rating : "......."
 }
 let key = Object.keys(movie)
