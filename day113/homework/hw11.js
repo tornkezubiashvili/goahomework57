@@ -8,7 +8,7 @@ let phone = {
 phone.model = "Redmi"
 phone.price = 600
 
-phone.model = "samsung"
+phone.model = "Samsung"
 phone.price = 800
 
 
