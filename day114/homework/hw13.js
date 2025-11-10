@@ -5,9 +5,9 @@
 let car = {
     "brand" : "mersedes",
     "model" : " W211",
-    func : function fullName(){
-        console.log(`მე მყავს ${this.brand} რომლის მოდელიც არის ${this.model}`)
-    }
+}
+car.func = function fullName(){
+    console.log(`მე მყავს ${this.brand} რომლის მოდელიც არის ${this.model}`)
 }
 
 console.log(car.func())

@@ -6,10 +6,12 @@
 let person = {
     "name": "tornike",
     "age": "17",
-    func: function func2() {
-        console.log(`ჩემი სახელია ${this.name} მე ვარ ${this.age} წლის`)
-    }
 
 }
+
+person.func = function showInfo(){
+    console.log(`ჩემი სახელია ${this.name} მე ვარ ${this.age} წლის`)
+}
+
 
 console.log(person.func())
