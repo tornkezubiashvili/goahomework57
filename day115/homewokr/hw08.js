@@ -3,4 +3,5 @@
 
 let num = prompt("Enter num")
 
-console.log(Math.pow(num , 2))
+console.log(Math.pow(Number(num , 2)))
+console.log(Math.pow(Number(num , 3)))

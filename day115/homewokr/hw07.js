@@ -2,4 +2,4 @@
 
 let num = prompt("Enter num")
 
-console.log(Math.sqrt(num))
+console.log(Math.sqrt(Number(num)))
