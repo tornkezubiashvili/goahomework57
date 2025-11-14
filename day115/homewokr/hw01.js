@@ -2,4 +2,4 @@
 
 let num = prompt("Enter  number; ")
 
-console.log(Math.floor(num))
+console.log(Math.floor(Number(num)))

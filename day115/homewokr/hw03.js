@@ -4,4 +4,4 @@
 let a = 5
 let b = 7
 
-console.log(Math.max(a,b))
+console.log(Math.max(Number(a,b)))
