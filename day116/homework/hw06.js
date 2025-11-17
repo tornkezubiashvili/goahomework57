@@ -5,12 +5,11 @@
 
 
 let p = document.getElementsByTagName("p")
-let p2 = document.getElementsByTagName("p")
 
+let first = p[0].textContent 
 
-
-// p[0].textContent = p[1].textContent 
-// p2[1].textContent = p2[0].textContent 
+p[0].textContent = p[1].textContent 
+p[1].textContent = first
 
 
 
