@@ -13,5 +13,5 @@ p[1].textContent = first
 
 
 
-console.log(p[1].textContent)
 console.log(p[0].textContent)
+console.log(p[1].textContent)
