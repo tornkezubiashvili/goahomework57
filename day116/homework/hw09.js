@@ -3,6 +3,8 @@
 
 let x1 = Math.floor(Math.random() *  100) +1
 
+
+
 if(x1 >= 50){
     console.log("50 დან 100 ჩათვლით",x1)
 }
