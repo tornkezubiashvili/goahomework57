@@ -1,0 +1,3 @@
+let body = document.body
+
+body.innerHTML = " <div style='border: 1px solid black; width: 180px; height: 260px; display: flex; flex-direction: column; align-items: center; justify-content: start; padding: 20px 20px;'><img width = 50px src='https://cdn-icons-png.flaticon.com/512/733/733635.png'> <h1 style='font-size: 25px; ;'>TWITTER</h1>  <p style='font-size: 15px;display: flex; text-align: center; width: 180px;'>Lorem inpsum dolor sit amet,consectetur adipisicing elit.Expedita ullam aliquid non eligendi,nemo est neque reiciendis error?</p> <button style='border: none; background-color: black; color: white; font-size: 10px; width: 180px; height: 50px; border-radius: 30px;'>READ MORE</button></div>"
