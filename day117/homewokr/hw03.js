@@ -1,0 +1,4 @@
+let body = document.body
+
+
+body.innerHTML = " <div style='border: 1px solid black; width: 180px; height: 260px; display: flex;background-color: #e1306c;border:none; flex-direction: column; align-items: center; justify-content: start; padding: 20px 20px;'><img width = 50px src='https://img.freepik.com/premium-vector/instagram-logo-icon_1273375-1177.jpg?semt=ais_incoming&w=740&q=80'> <h1 style='font-size: 25px; color: white;'>INSTAGRAM</h1>  <p style='font-size: 15px;display: flex; color: white; text-align: center; width: 180px;'>Lorem inpsum dolor sit amet,consectetur adipisicing elit.Expedita ullam aliquid non eligendi,nemo est neque reiciendis error?</p> <button style='border: none; background-color: white; color: palevioletred; font-size: 10px; width: 180px; height: 50px; border-radius: 30px;'>READ MORE</button></div>"
