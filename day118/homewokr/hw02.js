@@ -5,7 +5,6 @@ let button = document.getElementById("but")
 
 function klickfunc(){
     button.innerHTML = "<button style = 'background-color: red;color: white;'>klick</button>"
-
 }
 
 button.addEventListener('click',klickfunc)
