@@ -1,28 +1,21 @@
 let form = document.getElementById('form')
 
-form.addEventListener('submit',function(event){
+form.addEventListener('submit', function (event) {
     event.preventDefault()
-    console.log(event.target.name.value)
-    console.log(event.target.suenamename.value)
-    console.log(event.target.age.value)
 
-    let liName = document.getElementById('liName')
-    let liSurname = document.getElementById('liSuname')
-    let liAge = document.getElementById('liAge')
-
-    liName.textContent = event.target.name.value
-    liSurname.textContent = event.target.suenamename.value
-    liAge.textContent = event.target.age.value
-
-    let name = document.getElementById("name")
-    let Surnamenaem = document.getElementById("suenamename")
-    let age = document.getElementById("age")
+    let ui = document.getElementById("ul")
     
+    let Nameli = document.createElement("li")
+    let Surnameli = document.createElement("li")
+    let Ageli = document.createElement("li")
 
-    if(name.length > 0){
-        let new1 = document.createElement("p")
-        document.getElementById("ul").appendChild(new1)
-    }
+    Nameli.textContent = `name ${event.target.name.value}`
+    Surnameli.textContent =`surname ${event.target.suenamename.value}`
+    Ageli.textContent =`age ${event.target.age.value}`
 
-   
+
+    ui.appendChild(Nameli)
+    ui.appendChild(Surnameli)
+    ui.appendChild(Ageli)
+
 })
