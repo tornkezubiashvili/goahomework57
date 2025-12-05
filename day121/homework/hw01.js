@@ -13,7 +13,6 @@ form.addEventListener('submit', function (event) {
     Surnameli.textContent =`surname ${event.target.suenamename.value}`
     Ageli.textContent =`age ${event.target.age.value}`
 
-
     ui.appendChild(Nameli)
     ui.appendChild(Surnameli)
     ui.appendChild(Ageli)
