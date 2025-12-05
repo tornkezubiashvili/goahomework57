@@ -17,4 +17,11 @@ form.addEventListener('submit', function (event) {
     ul.appendChild(Surnameli)
     ul.appendChild(Ageli)
 
+
+
+    document.getElementById("name").value = ""
+    document.getElementById("suenamename").value = ""
+    document.getElementById("age").value = ""
+
+
 })
