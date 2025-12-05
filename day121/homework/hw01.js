@@ -3,7 +3,7 @@ let form = document.getElementById('form')
 form.addEventListener('submit', function (event) {
     event.preventDefault()
 
-    let ui = document.getElementById("ul")
+    let ul = document.getElementById("ul")
     
     let Nameli = document.createElement("li")
     let Surnameli = document.createElement("li")
@@ -13,8 +13,8 @@ form.addEventListener('submit', function (event) {
     Surnameli.textContent =`surname ${event.target.suenamename.value}`
     Ageli.textContent =`age ${event.target.age.value}`
 
-    ui.appendChild(Nameli)
-    ui.appendChild(Surnameli)
-    ui.appendChild(Ageli)
+    ul.appendChild(Nameli)
+    ul.appendChild(Surnameli)
+    ul.appendChild(Ageli)
 
 })
