@@ -1,4 +1,5 @@
 let form = document.getElementById("form")
+let body = document.body
 
 function User(name, age) {
     this.name = name
