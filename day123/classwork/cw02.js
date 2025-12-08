@@ -1,25 +1,25 @@
 let form = document.getElementById("form")
-let p1 = document.getElementById("p1")
-let p2 = document.getElementById("p2")
 
-form.addEventListener("submit",function(event){
-    event.preventDefault()
-
-    function User(Name,Age){
-        this.Name = Name
-        this.Age = Age
-        this.user1 = function func(){
-            p1.textContent = event.target.name.value
-            p2.textContent = event.target.age.value
-            console.log(event.target.name.value)
-        }
-        
+function User(name, nge) {
+    this.Name = Name
+    this.Age = Age
+    this.user1 = function func() {
+       return `my name is ${this.name} my age is ${this.age}`
     }
+
+}
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault()
+    let Usr = new User(e.target.name.value, e.target.age.value)
+    let p = document.createElement("p")
+    p.textContent = Usr.user1
+    body.appendChaild(myP)
     
-    let Usr = new User(event.target.name.value, event.target.age.value)
 })
 
 
-Usr.user1()
+
+
 
 
