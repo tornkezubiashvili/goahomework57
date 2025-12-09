@@ -14,7 +14,7 @@ form.addEventListener("submit",function(event){
         this.Password = Password
         this.Gmail = Gmail
     }
-    let User1 = new User(event.target.name.value,event.target.password.value,event.target.gmail.value )
+    let User1 = new User(event.target.name.value, event.target.password.value, event.target.gmail.value )
 
     UserList.push(User1)
 
