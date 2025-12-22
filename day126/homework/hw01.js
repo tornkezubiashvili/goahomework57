@@ -16,10 +16,10 @@ function time() {
         seconds.textContent = 0
     }
 
-    let Days = Math.floor(a/(1000*60*60*24))
-    let Seconds = Math.floor(a%(1000*60)/1000)
-    let Mins = Math.floor(a%(1000*60*60)/(1000*60))
-    let Hours = Math.floor(a%(1000*60*60*24)/(1000*60*60))
+    let Days = Math.floor(a / (1000 * 60 * 60 * 24))
+    let Seconds = Math.floor(a % (1000 * 60) / 1000)
+    let Mins = Math.floor(a % (1000 * 60 * 60) / (1000 * 60))
+    let Hours = Math.floor(a % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
 
     days.textContent = Days
     hours.textContent = Hours
@@ -27,20 +27,21 @@ function time() {
     seconds.textContent = Seconds
 }
 
-setInterval(time,1000)
+setInterval(time, 1000)
 let current = new Date()
 let a = newYear - current
 
-if(a<=0){
+if (a <= 0) {
     let h2 = document.createElement('h3')
     h2.textContent = "HAPPY NEW YEAR!"
     document.body.appendChild(h3)
 }
 
-form.addEventListener("change",function(e){
+form.addEventListener("change", function (e) {
     let time = new Date(e.target.value)
-    if(time < current){
+    if (time < current) {
         alert("error")
+    } else {
+        newYear = time
     }
-    newYear = time
 })
