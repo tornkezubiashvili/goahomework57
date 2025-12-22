@@ -20,11 +20,36 @@ function time() {
     let Seconds = Math.floor(a % (1000 * 60) / 1000)
     let Mins = Math.floor(a % (1000 * 60 * 60) / (1000 * 60))
     let Hours = Math.floor(a % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    if(Days< 10){
+        days.textContent = `0 ${Days}`
+    }else{
+        days.textContent = Days
+    }
 
-    days.textContent = Days
-    hours.textContent = Hours
-    mins.textContent = Mins
-    seconds.textContent = Seconds
+
+    if(Hours< 10){
+        hours.textContent = `0 ${Hours}`
+    }else{
+        hours.textContent = Hours
+    }
+
+
+    if(Mins< 10){
+        mins.textContent = `0 ${Mins}`
+    }else{
+        mins.textContent = Mins
+    }
+
+
+    if(Seconds< 10){
+        seconds.textContent = `0 ${Seconds}`
+    }else{
+        seconds.textContent = Seconds
+    }
+
+   
+    
+   
 }
 
 setInterval(time, 1000)
