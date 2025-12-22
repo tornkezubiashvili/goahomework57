@@ -40,7 +40,7 @@ if (a <= 0) {
 form.addEventListener("change", function (e) {
     let time = new Date(e.target.value)
     if (time < current) {
-        alert("error")
+        alert("Enter the future")
     } else {
         newYear = time
     }
