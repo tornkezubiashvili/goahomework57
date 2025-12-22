@@ -3,9 +3,7 @@ let hours = document.getElementById("Hours")
 let mins = document.getElementById("Mins")
 let seconds = document.getElementById("Seconds")
 
-
 let newYear = new Date("2026-1-1")
-
 
 function time() {
     let current = new Date()
