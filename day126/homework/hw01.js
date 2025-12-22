@@ -8,7 +8,7 @@ let newYear = new Date("2026-1-1")
 
 function time() {
     let current = new Date()
-    let a = newYear - current
+    let a = newYear - current - 14800000
     if (a <= 0) {
         days.textContent = 0
         hours.textContent = 0
