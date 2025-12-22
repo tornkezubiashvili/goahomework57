@@ -2,6 +2,7 @@ let days = document.getElementById("Days")
 let hours = document.getElementById("Hours")
 let mins = document.getElementById("Mins")
 let seconds = document.getElementById("Seconds")
+let form = document.getElementById("form")
 
 let newYear = new Date("2026-1-1")
 
@@ -35,3 +36,11 @@ if(a<=0){
     h2.textContent = "HAPPY NEW YEAR!"
     document.body.appendChild(h3)
 }
+
+form.addEventListener("change",function(e){
+    let time = new Date(e.target.value)
+    if(time < current){
+        alert("error")
+    }
+    newYear = time
+})
