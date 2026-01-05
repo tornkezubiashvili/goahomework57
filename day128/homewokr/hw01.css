@@ -164,6 +164,7 @@ main {
     border-radius: 20px;
     display: none;
     text-align: center;
+    font-size: 25px;
 }
 
 @keyframes heart {
