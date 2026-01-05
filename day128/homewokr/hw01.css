@@ -1,9 +1,10 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
-body{
+
+body {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -12,7 +13,7 @@ body{
     font-family: sans-serif;
 }
 
-header{
+header {
     width: 100%;
     height: 0px;
     background-color: #212134;
@@ -21,47 +22,57 @@ header{
     justify-content: center;
     padding: 50px 0px;
 }
-header img{
+
+header img {
     width: 150px;
 }
-main{
+
+main {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-.watch{
+
+.watch {
     display: flex;
     flex-direction: column;
     position: relative;
 }
-.watch img{
+
+.watch img {
     width: 600px;
 }
-.watch p{
+
+.watch p {
     position: absolute;
     top: 270px;
     left: 230px;
     color: white;
     font-size: 35px;
 }
-.info{
+
+.info {
     display: flex;
     flex-direction: column;
 }
-#watchheart{
+
+#watchheart {
     display: none;
 }
-.info{
+
+.info {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.info h1{
+
+.info h1 {
     font-size: 50px;
 }
-.info p{
+
+.info p {
     max-width: 700px;
     font-size: 13px;
     opacity: 60%;
@@ -73,40 +84,48 @@ main{
     gap: 10px;
 }
 
-.button-div1 button{
+.button-div1 button {
     width: 60px;
     height: 40px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
 }
-#black{
+
+#black {
     background-color: #23211f;
 }
-#red{
+
+#red {
     background-color: #ca3d22;
 }
-#purple{
+
+#purple {
     background-color: #8a5362
 }
-#pink{
+
+#pink {
     background-color: #e9c7be;
 }
-#blue{
+
+#blue {
     background-color: #565681;
 }
-.button-div2{
+
+.button-div2 {
     display: flex;
     gap: 20px;
 }
-.button-div2 button{
+
+.button-div2 button {
     height: 40px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     padding: 5px 20px;
 }
-.BUYNOW{
+
+.BUYNOW {
     width: 150px;
     height: 50px;
     background-color: #ffa500;
@@ -117,7 +136,8 @@ main{
     cursor: pointer;
 
 }
-#watchheart img{
+
+#watchheart img {
     width: 150px;
     position: absolute;
     bottom: 270px;
@@ -126,12 +146,14 @@ main{
     animation-duration: 1.2s;
     animation-iteration-count: infinite;
 }
-#watchheart p{
+
+#watchheart p {
     position: absolute;
     top: 320px;
     left: 270px;
 }
-#buyDIV{
+
+#buyDIV {
     position: absolute;
     background-color: rgb(16, 4, 32);
     color: white;
@@ -141,7 +163,7 @@ main{
     right: 700px;
     border-radius: 20px;
     display: none;
-   text-align: center;
+    text-align: center;
 }
 
 @keyframes heart {
@@ -164,4 +186,150 @@ main{
     100% {
         transform: scale(1);
     }
+}
+
+@media (max-width: 1150px) {
+    main {
+        padding: 0px 20px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .info h1 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 850px) {
+    *{
+        align-items: center;
+    }
+    .button-div1{
+        justify-content: center;
+    }
+
+    .info h1 {
+        font-size: 40px;
+    }
+
+    .watch img {
+        width: 450px;
+    }
+
+    .watch p {
+        position: absolute;
+        top: 200px;
+        left: 170px;
+        color: white;
+        font-size: 28px;
+    }
+
+    #watchheart img {
+        width: 110px;
+        position: absolute;
+        bottom: 210px;
+        left: 170px;
+        animation-name: heart;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+    }
+
+    #watchheart p {
+        position: absolute;
+        top: 250px;
+        left: 210px;
+    }
+
+    .info h1 {
+        font-size: 30px;
+    }
+
+    #buyDIV {
+        position: absolute;
+        background-color: rgb(16, 4, 32);
+        color: white;
+        width: 300px;
+        height: 200px;
+        display: flex;
+        right: 200px;
+        border-radius: 20px;
+        display: none;
+        text-align: center;
+        bottom: 200px;
+    }
+
+    .BUYNOW {
+        width: 100px;
+        height: 50px;
+        background-color: #ffa500;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 540;
+        cursor: pointer;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+    .info p {
+        width: 310px;
+    }
+
+    .info h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .button-div1 {
+        width: 300px;
+        flex-wrap: wrap;
+    }
+
+    .watch img {
+        width: 350px;
+    }
+
+    .watch p {
+        position: absolute;
+        top: 160px;
+        left: 130px;
+        color: white;
+        font-size: 22px;
+    }
+
+    #watchheart img {
+        width: 80px;
+        position: absolute;
+        bottom: 170px;
+        left: 137px;
+    }
+
+    #watchheart p {
+        position: absolute;
+        top: 190px;
+        left: 164px;
+    }
+
+    #buyDIV {
+        position: absolute;
+        background-color: rgb(16, 4, 32);
+        color: white;
+        width: 250px;
+        height: 200px;
+        display: flex;
+        right: 80px;
+        border-radius: 20px;
+        display: none;
+        text-align: center;
+        bottom: 200px;
+    }
+    #buyDIV p{
+        width: 210px;
+    }
+
 }
