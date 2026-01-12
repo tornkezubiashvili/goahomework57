@@ -203,6 +203,7 @@ body {
 .cvc {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .cvc label {
@@ -230,6 +231,16 @@ body {
     background-color: #190724;
     color: white;
     cursor: pointer;
+}
+span{
+    color: red;
+    display: none;
+    
+}
+.cvcDIV{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 1660px) {
