@@ -1,7 +1,11 @@
 let form = document.getElementById("form")
 let name = document.getElementById("name")
 let nameSPAN = document.getElementById("nameSPAN")
+let dateSPAN = document.getElementById("dateSPAN")
+
 let pNAME = document.getElementById("pNAME")
+let month = document.getElementById("month")
+let years = document.getElementById("years")
 
 let cardnumber = document.getElementById("cardnumber")
 let number = document.getElementById("number")
@@ -14,12 +18,8 @@ form.addEventListener("submit", function (e) {
     let yearstarget = e.target.years.value
     let cvctarget = e.target.cvc.value
     
-
-    let cardtarget = e.target.number.value
-
-
-
-
+    
+    
     function changname() {
         pNAME.textContent = nametarget
         for (let i of nametarget) {
@@ -27,27 +27,41 @@ form.addEventListener("submit", function (e) {
                 nameSPAN.style.display = "block"
                 nameSPAN.textContent = "wrong format, letter only"
                 name.style.borderColor = "red"
-                pNAME.textContent ="tornike"
+                pNAME.textContent = "tornike"
                 return 0
-
+                
             }
         }
-
+        
         if (nametarget.length < 3 || nametarget.length === 0) {
             nameSPAN.textContent = "can't be less than  three"
             nameSPAN.style.display = "block"
             name.style.borderColor = "red"
-            pNAME.textContent ="tornike"
+            pNAME.textContent = "tornike"
         } else {
             nameSPAN.style.display = "none"
             name.style.borderColor = "blue"
             nameCorrect = true
         }
+        
+    }
+    
+     let alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+    function monthChange() {
+       
+        for (let j of monthtarget) {
+            if ((alphabet.includes(j))){
+                dateSPAN.style.display = "block"
+                name.style.borderColor = "red"
+            }else if(monthtarget.length){
 
+            }
+        }
     }
 
-   
-changname()
+
+    changname()
+    monthChange() 
 
 })
 
