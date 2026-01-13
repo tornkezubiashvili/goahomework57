@@ -11,6 +11,10 @@ let years = document.getElementById("years")
 let cvc = document.getElementById("cvc")
 let cvcSPAN = document.getElementById("cvcSPAN")
 
+let cardnumber = document.getElementById("cardnumber")
+let numSPAN = document.getElementById("numSPAN")
+let cardlength = cardnumber.textContent.length
+
 
 form.addEventListener("submit", function (e) {
     e.preventDefault()
@@ -48,7 +52,7 @@ form.addEventListener("submit", function (e) {
 
     }
 
-    let alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+    let alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzაბგდევზთიკლმნოპჟრსტუფქღყშჩცძწჭხჯჰ"
     function monthChange() {
         for (let j of monthtarget) {
             if ((alphabet.includes(j))) {
@@ -105,7 +109,7 @@ form.addEventListener("submit", function (e) {
                 cvcSPAN.style.display = "block"
                 e.target.cvc.style.borderColor = "red"
                 cvcSPAN.textContent = "can't be less than  three"
-            }else {
+            } else {
                 cvcSPAN.style.display = "none"
                 e.target.cvc.style.borderColor = "blue"
                 cvc.textContent = cvctarget
@@ -113,11 +117,35 @@ form.addEventListener("submit", function (e) {
         }
     }
 
+    function numberChange() {
+        for (let n of numbertarget) {
+            if ((alphabet.includes(n))) {
+                numSPAN.style.display = "block"
+                e.target.number.style.borderColor = "red"
+                return 0
+            } else if (numbertarget.length != 16) {
+                numSPAN.style.display = "block"
+                e.target.number.style.borderColor = "red"
+                numSPAN.textContent = "can't enter more than or less than sixteen."
+            }else{
+                numSPAN.style.display = "none"
+                e.target.number.style.borderColor = "blue"
+                cardnumber.textContent = numbertarget
+                for(let y = 0; y < cardlength; y++){
+                    if(y % 4 === 0){
+                        cardnumber[y].textContent = " "
+                    }
+                }
+            }
+        }
+
+    }
 
     changname()
     monthChange()
     yearsChange()
     cvcChange()
+    numberChange()
 
 })
 
