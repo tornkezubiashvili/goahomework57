@@ -127,13 +127,14 @@ form.addEventListener("submit", function (e) {
                 numSPAN.style.display = "block"
                 e.target.number.style.borderColor = "red"
                 numSPAN.textContent = "can't enter more than or less than sixteen."
-            }else{
+            } else {
                 numSPAN.style.display = "none"
                 e.target.number.style.borderColor = "blue"
                 cardnumber.textContent = numbertarget
-                for(let y = 0; y < cardlength; y++){
-                    if(y % 4 === 0){
-                        cardnumber[y].textContent = " "
+                for (let y = 0; y <= 12; y++) {
+                    if (y % 4 == 0) {
+                        console.log(cardnumber[4])
+
                     }
                 }
             }
@@ -148,4 +149,3 @@ form.addEventListener("submit", function (e) {
     numberChange()
 
 })
-
