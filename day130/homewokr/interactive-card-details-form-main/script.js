@@ -82,16 +82,11 @@ form.addEventListener("submit", function (e) {
                 dateSPAN.style.display = "block"
                 e.target.years.style.borderColor = "red"
                 return 0
-            } else if (yearstarget.length != 4) {
+            } else if (yearstarget.length != 2) {
                 dateSPAN.style.display = "block"
                 e.target.years.style.borderColor = "red"
                 dateSPAN.textContent = "can't be less than Four"
-            } else if (yearstarget > 2026) {
-                dateSPAN.style.display = "block"
-                e.target.years.style.borderColor = "red"
-                dateSPAN.textContent = "can't enter above 2026."
-            }
-            else {
+            }else {
                 dateSPAN.style.display = "none"
                 e.target.years.style.borderColor = "blue"
                 years.textContent = yearstarget
