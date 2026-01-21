@@ -87,11 +87,11 @@ body {
 
 .quantity {
     background-color: hsl(14, 86%, 42%);
+    width: 150px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 150px;
-    height: 50px;
     border-radius: 40px;
     margin-top: -40px;
     margin-left: 90px;
@@ -99,9 +99,10 @@ body {
     cursor: pointer;
     color: white;
     display: none;
-    
+
 }
-.plus{
+
+.plus {
     border-radius: 50%;
     border: 1px solid white;
     width: 20px;
@@ -109,7 +110,8 @@ body {
     padding: 4px;
     cursor: pointer;
 }
-.quantit p{
+
+.quantit p {
     color: white;
 }
 
@@ -118,7 +120,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
-
 }
 
 .rightDIV h1 {
@@ -130,6 +131,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .rightDIV div img {
