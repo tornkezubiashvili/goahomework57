@@ -8,9 +8,15 @@ let p = document.getElementsByClassName("p")
 
 let addeditems = document.getElementById("addeditems")
 
+let foodP = document.getElementsByClassName("foodP")
+let foodH2 = document.getElementsByClassName("foodH2")
+let foodPrice = document.getElementsByClassName("foodPrice")
+
 
 let Pquantity = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 let a = 0
+
+
 
 for (let i = 0; i <= addbutton.length; i++) {
     addbutton[i].addEventListener("click", function () {
