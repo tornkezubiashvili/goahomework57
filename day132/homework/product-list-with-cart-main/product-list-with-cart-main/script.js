@@ -42,28 +42,7 @@ for (let i = 0; i <= addbutton.length; i++) {
             }
         })
 
-        // quantity[i].addEventListener("click", function () {
-
-        //     addeditems.style.display = "none"
-        //     let Caretdiv1 = document.createElement("div")
-        //     let CaretFoodName = document.createElement("p")
-        //     let Caretdiv2 = document.createElement("div")
-        //     let NumberofFood = document.createElement("p")
-        //     CaretFoodName.textContent = foodH2[i].textContent
-        //     NumberofFood.textContent = `${Pquantity[i]}x`
-
-        //     Purchased.appendChild(Caretdiv1)
-
-        //     Caretdiv1.appendChild(CaretFoodName)
-        //     Purchased.appendChild(Caretdiv2)
-        //     Caretdiv2.appendChild(NumberofFood)
-
-
-
-
-        // })
-
-        quantity[i].addEventListener("click", function addFirstTask() {
+        quantity[i].addEventListener("click", function () {
             addeditems.style.display = "none"
             let Caretdiv1 = document.createElement("div")
             let CaretFoodName = document.createElement("p")
@@ -77,14 +56,34 @@ for (let i = 0; i <= addbutton.length; i++) {
             Caretdiv1.appendChild(CaretFoodName)
             Purchased.appendChild(Caretdiv2)
             Caretdiv2.appendChild(NumberofFood)
-        }, { once: true });
 
-        quantity[i].addEventListener("click", function () {
-            NumberofFood.textContent = `${Pquantity[i]}x`
-            Caretdiv2.appendChild(NumberofFood)
+
         })
 
     })
+
+    quantity[i].addEventListener("click", function addFirstTask() {
+        addeditems.style.display = "none"
+        let Caretdiv1 = document.createElement("div")
+        let CaretFoodName = document.createElement("p")
+        let Caretdiv2 = document.createElement("div")
+        let NumberofFood = document.createElement("p")
+        CaretFoodName.textContent = foodH2[i].textContent
+        NumberofFood.textContent = `${Pquantity[i]}x`
+
+        Purchased.appendChild(Caretdiv1)
+
+        Caretdiv1.appendChild(CaretFoodName)
+        Purchased.appendChild(Caretdiv2)
+        Caretdiv2.appendChild(NumberofFood)
+    }, { once: true });
+
+
+
+
+
+
+
 
 
 }
