@@ -71,7 +71,7 @@ body {
 }
 
 .box button {
-    width: 150px;
+    width: 200px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -80,21 +80,21 @@ body {
     border: 1px solid hsl(14, 86%, 42%);
     cursor: pointer;
     margin-top: -40px;
-    margin-left: 90px;
+    margin-left: 70px;
     gap: 10px;
 
 }
 
 .quantity {
     background-color: hsl(14, 86%, 42%);
-    width: 150px;
+    width: 200px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 40px;
     margin-top: -40px;
-    margin-left: 90px;
+    margin-left: 70px;
     padding: 0px 20px;
     cursor: pointer;
     color: white;
@@ -131,11 +131,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: none;
 }
 
 .rightDIV div img {
     width: 150px;
+}
+
+#addeditems {
+    display: none;
+}
+
+#Purchased{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 
