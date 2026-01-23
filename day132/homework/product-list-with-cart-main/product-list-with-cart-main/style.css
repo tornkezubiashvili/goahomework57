@@ -147,6 +147,21 @@ body {
     gap: 20px;
 }
 
+.CaretFoodName{
+    color: hsl(14, 65%, 9%);
+    font-weight: 900;
+}
+.NumberofFood{
+    color: hsl(14, 86%, 42%);
+}
+.Caretdiv1{
+    display: flex;
+    
+}
+.Caretdiv2{
+    display: flex;
+    
+}
 
 
 @media (max-width: 900px) {

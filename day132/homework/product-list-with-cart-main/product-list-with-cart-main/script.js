@@ -41,44 +41,48 @@ for (let i = 0; i <= addbutton.length; i++) {
                 p[i].textContent = Pquantity[i]
             }
         })
+        let Caretdiv1 = document.createElement("div")
+        let CaretFoodName = document.createElement("p")
+        let Caretdiv2 = document.createElement("div")
+        let NumberofFood = document.createElement("h3")
+        let Price = document.createElement("p")
+        let Fullprice = document.createElement("p")
+        let Fullpriceee =  Pquantity[i] * foodPrice[i].textContent
 
         quantity[i].addEventListener("click", function () {
             addeditems.style.display = "none"
-            let Caretdiv1 = document.createElement("div")
-            let CaretFoodName = document.createElement("p")
-            let Caretdiv2 = document.createElement("div")
-            let NumberofFood = document.createElement("p")
+
             CaretFoodName.textContent = foodH2[i].textContent
             NumberofFood.textContent = `${Pquantity[i]}x`
 
             Purchased.appendChild(Caretdiv1)
+            Caretdiv1.classList = "Caretdiv1"
 
             Caretdiv1.appendChild(CaretFoodName)
+            CaretFoodName.classList = "CaretFoodName"
+            
+
             Purchased.appendChild(Caretdiv2)
+            Caretdiv2.classList= "Caretdiv2"
+            
+
             Caretdiv2.appendChild(NumberofFood)
+            NumberofFood.classList = "NumberofFood"
+
+            
+            Price.textContent = `@$ ${foodPrice[i].textContent}`
+            Caretdiv2.appendChild(Price)
+
+            Fullprice.classList = "Fullprice"
+            Caretdiv2.appendChild(Fullprice)
+            Fullprice.textContent = `$ ${Fullpriceee}`
+            
+            
 
 
         })
 
     })
-
-    quantity[i].addEventListener("click", function addFirstTask() {
-        addeditems.style.display = "none"
-        let Caretdiv1 = document.createElement("div")
-        let CaretFoodName = document.createElement("p")
-        let Caretdiv2 = document.createElement("div")
-        let NumberofFood = document.createElement("p")
-        CaretFoodName.textContent = foodH2[i].textContent
-        NumberofFood.textContent = `${Pquantity[i]}x`
-
-        Purchased.appendChild(Caretdiv1)
-
-        Caretdiv1.appendChild(CaretFoodName)
-        Purchased.appendChild(Caretdiv2)
-        Caretdiv2.appendChild(NumberofFood)
-    }, { once: true });
-
-
 
 
 
