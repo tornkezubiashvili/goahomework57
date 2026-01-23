@@ -1,7 +1,6 @@
 let addbutton = document.getElementsByClassName("add")
 let quantity = document.getElementsByClassName("quantity")
 
-
 let minuss = document.getElementsByClassName("minuss")
 let plusss = document.getElementsByClassName("plusss")
 let p = document.getElementsByClassName("p")
@@ -12,15 +11,11 @@ let foodP = document.getElementsByClassName("foodP")
 let foodH2 = document.getElementsByClassName("foodH2")
 let foodPrice = document.getElementsByClassName("foodPrice")
 
-
 let items = document.getElementById("items")
 let Purchased = document.getElementById("Purchased")
 
-
 let Pquantity = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 let num = 0
-
-
 
 for (let i = 0; i <= addbutton.length; i++) {
     addbutton[i].addEventListener("click", function () {
@@ -61,36 +56,18 @@ for (let i = 0; i <= addbutton.length; i++) {
             Caretdiv1.appendChild(CaretFoodName)
             CaretFoodName.classList = "CaretFoodName"
             
-
             Purchased.appendChild(Caretdiv2)
             Caretdiv2.classList= "Caretdiv2"
             
-
             Caretdiv2.appendChild(NumberofFood)
             NumberofFood.classList = "NumberofFood"
-
-            
+      
             Price.textContent = `@$ ${foodPrice[i].textContent}`
             Caretdiv2.appendChild(Price)
 
             Fullprice.classList = "Fullprice"
             Caretdiv2.appendChild(Fullprice)
             Fullprice.textContent = `$ ${Fullpriceee}`
-            
-            
-
-
         })
-
     })
-
-
-
-
-
-
-
 }
-
-
-
