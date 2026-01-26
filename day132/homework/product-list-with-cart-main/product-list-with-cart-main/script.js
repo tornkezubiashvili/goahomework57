@@ -44,13 +44,14 @@ for (let i = 0; i <= addbutton.length; i++) {
         let NumberofFood = document.createElement("h3")
         let Price = document.createElement("p")
         let Fullprice = document.createElement("p")
-        let Fullpriceee = Pquantity[i].textContent * foodPrice[i].textContent
+        let Fullpriceee = Pquantity[i] * foodPrice[i].textContent
 
-        console.log(Pquantity[i] * foodPrice[i].textContent)
+
 
         p[i].addEventListener("click", function () {
             addeditems.style.display = "none"
-
+            console.log(Pquantity[i] * foodPrice[i].textContent)
+            console.log
             // CaretFoodName.textContent = foodH2[i].textContent
             // NumberofFood.textContent = `${Pquantity[i]}x`
 
@@ -81,7 +82,7 @@ for (let i = 0; i <= addbutton.length; i++) {
                 <div class="Caretdiv2">
                     <h3 class = "NumberofFood">${Pquantity[i]}x </h3>
                     <p class = "Price">@$ ${foodPrice[i].textContent}</p>
-                    <p class = "Fullprice">$ ${Fullpriceee}</p>
+                    <p class = "Fullprice">$ ${Pquantity[i] * foodPrice[i].textContent}</p>
                 </div>
 
             `

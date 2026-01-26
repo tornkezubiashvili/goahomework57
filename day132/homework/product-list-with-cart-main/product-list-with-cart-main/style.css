@@ -131,36 +131,46 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .rightDIV div img {
     width: 150px;
+    margin-left: 40px;
 }
 
 #addeditems {
-    display: none;
+    display: flex;
+    
 }
 
-#Purchased{
+#Purchased {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.CaretFoodName{
+.CaretFoodName {
     color: hsl(14, 65%, 9%);
     font-weight: 900;
 }
-.NumberofFood{
+
+.NumberofFood {
     color: hsl(14, 86%, 42%);
 }
-.Caretdiv1{
+
+.Caretdiv1 {
     display: flex;
-    
+    flex-direction: column;
+
 }
-.Caretdiv2{
+
+.Caretdiv2 {
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 
