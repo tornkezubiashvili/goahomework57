@@ -1,5 +1,6 @@
 let addbutton = document.getElementsByClassName("add")
 let quantity = document.getElementsByClassName("quantity")
+let foodIMG = document.getElementsByClassName("foodIMG")
 
 let minuss = document.getElementsByClassName("minuss")
 let plusss = document.getElementsByClassName("plusss")
@@ -22,6 +23,7 @@ for (let i = 0; i <= addbutton.length; i++) {
         addbutton[i].style.display = "none"
         quantity[i].style.display = "block"
         quantity[i].style.display = "flex"
+        foodIMG[i].style.border = "1px solid  hsl(14, 86%, 42%)"
 
 
         plusss[i].addEventListener("click", function () {
@@ -42,32 +44,47 @@ for (let i = 0; i <= addbutton.length; i++) {
         let NumberofFood = document.createElement("h3")
         let Price = document.createElement("p")
         let Fullprice = document.createElement("p")
-        let Fullpriceee =  Pquantity[i] * foodPrice[i].textContent
+        let Fullpriceee = Pquantity[i].textContent * foodPrice[i].textContent
 
-        quantity[i].addEventListener("click", function () {
+        console.log(Pquantity[i] * foodPrice[i].textContent)
+
+        p[i].addEventListener("click", function () {
             addeditems.style.display = "none"
 
-            CaretFoodName.textContent = foodH2[i].textContent
-            NumberofFood.textContent = `${Pquantity[i]}x`
+            // CaretFoodName.textContent = foodH2[i].textContent
+            // NumberofFood.textContent = `${Pquantity[i]}x`
 
-            Purchased.appendChild(Caretdiv1)
-            Caretdiv1.classList = "Caretdiv1"
+            // Purchased.appendChild(Caretdiv1)
+            // Caretdiv1.classList = "Caretdiv1"
 
-            Caretdiv1.appendChild(CaretFoodName)
-            CaretFoodName.classList = "CaretFoodName"
-            
-            Purchased.appendChild(Caretdiv2)
-            Caretdiv2.classList= "Caretdiv2"
-            
-            Caretdiv2.appendChild(NumberofFood)
-            NumberofFood.classList = "NumberofFood"
-      
-            Price.textContent = `@$ ${foodPrice[i].textContent}`
-            Caretdiv2.appendChild(Price)
+            // Caretdiv1.appendChild(CaretFoodName)
+            // CaretFoodName.classList = "CaretFoodName"
 
-            Fullprice.classList = "Fullprice"
-            Caretdiv2.appendChild(Fullprice)
-            Fullprice.textContent = `$ ${Fullpriceee}`
+            // Purchased.appendChild(Caretdiv2)
+            // Caretdiv2.classList= "Caretdiv2"
+
+            // Caretdiv2.appendChild(NumberofFood)
+            // NumberofFood.classList = "NumberofFood"
+
+            // Price.textContent = `@$ ${foodPrice[i].textContent}`
+            // Caretdiv2.appendChild(Price)
+
+            // Fullprice.classList = "Fullprice"
+            // Caretdiv2.appendChild(Fullprice)
+            // Fullprice.textContent = `$ ${Fullpriceee}`
+
+
+            Purchased.innerHTML = `
+                <div class="Caretdiv1"> 
+                    <p class ="CaretFoodName">${foodH2[i].textContent}x</p>
+                </div>
+                <div class="Caretdiv2">
+                    <h3 class = "NumberofFood">${Pquantity[i]}x </h3>
+                    <p class = "Price">@$ ${foodPrice[i].textContent}</p>
+                    <p class = "Fullprice">$ ${Fullpriceee}</p>
+                </div>
+
+            `
         })
     })
 }
