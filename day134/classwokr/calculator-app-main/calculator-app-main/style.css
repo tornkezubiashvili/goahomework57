@@ -25,8 +25,8 @@ body {
 }
 
 #res {
-  width: 400px;
-  height: 100px;
+  width: 450px;
+  height: 130px;
   background-color: #181f32;
   border-radius: 10px;
   display: flex;
@@ -38,10 +38,10 @@ body {
 }
 
 .func {
-  width: 400px;
+  width: 450px;
   display: grid;
-  grid-template-columns: repeat(4, 75px);
-  grid-template-rows: repeat(5, 50px);
+  grid-template-columns: repeat(4, 85px);
+  grid-template-rows: repeat(5, 60px);
   justify-content: center;
   background-color: #252d44;
   border-radius: 10px;

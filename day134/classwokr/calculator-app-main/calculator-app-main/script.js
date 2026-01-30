@@ -2,7 +2,7 @@ let numbers = document.getElementsByClassName("num")
 let delet = document.getElementById("del")
 let plus = document.getElementById("plus")
 let minus = document.getElementById("minus")
-let dot = document.getElementById("dot")
+let point = document.getElementById("point")
 let gayofa = document.getElementById("gayofa")
 let x = document.getElementById("x");
 let reset = document.getElementById("reset")
@@ -37,7 +37,7 @@ plus.addEventListener("click", function () {
   res.textContent = fin
 })
 
-dot.addEventListener("click", function () {
+point.addEventListener("click", function () {
   fin += "."
   res.textContent = fin
 })
