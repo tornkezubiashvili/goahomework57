@@ -8,47 +8,54 @@ let x = document.getElementById("x");
 let reset = document.getElementById("reset")
 let equal = document.getElementById("equal")
 
-let result = document.getElementById("res")
+let res = document.getElementById("res")
+let calc = document.getElementById("calc")
+let body = document.body
+let left = document.getElementsByClassName("left")
+let theme = document.getElementsByClassName("theme")
+let bkk = document.getElementById("bk")
+let func = document.getElementById("func")
+
 
 let fin = ""
 
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener("click", function (e) {
     fin += numbers[i].textContent
-    result.textContent = fin
+    res.textContent = fin
   })
 }
 
 plus.addEventListener("click", function () {
   fin += "+"
-  result.textContent = fin
+  res.textContent = fin
 });
 minus.addEventListener("click", function () {
   fin += "-"
-  result.textContent = fin
+  res.textContent = fin
 });
 x.addEventListener("click", function () {
   fin += "*"
-  result.textContent = fin
+  res.textContent = fin
 });
 dot.addEventListener("click", function () {
   fin += "."
-  result.textContent = fin
+  res.textContent = fin
 });
 gayofa.addEventListener("click", function () {
   fin += "/"
-  result.textContent = fin
+  res.textContent = fin
 });
 delet.addEventListener("click", function () {
   fin = fin.slice(0, -1)
-  result.textContent = fin
+  res.textContent = fin
 });
 reset.addEventListener("click", function () {
-  result.textContent = ""
+  res.textContent = ""
   fin = ""
 });
 equal.addEventListener("click", function () {
-  result.textContent = eval(fin)
+  res.textContent = eval(fin)
 });
 
 let bk = document.getElementById("bk")
@@ -67,11 +74,36 @@ btn.addEventListener("click", function () {
   }
   if (position == 2) {
     bk.style.justifyContent = "center"
+    func.style.backgroundColor = "#d3cdcd"
+    delet.style.backgroundColor = "#388187"
+    delet.style.color = "#fefefe"
+    reset.style.backgroundColor = "#388187"
+    reset.style.color = "#fefefe"
+    res.style.backgroundColor = "#fefefe"
+    res.style.color = "#39392d"
+    calc.style.color = "#39392d"
+    body.style.backgroundColor = "#e6e6e6"
+    left[0].style.color = "#39392d"
+    theme[0].style.color = "#39392d"
+    bkk.style.backgroundColor = "#d3cdcd"
+
   }
   if (position == 3) {
     bk.style.justifyContent = "end"
     position = 0
-    document.body.style.background = "#17062a"
+    bk.style.justifyContent = "center"
+    func.style.backgroundColor = "#17062a"
+    delet.style.backgroundColor = "#56077c"
+    delet.style.color = "#fefefe"
+    reset.style.backgroundColor = "#56077c"
+    reset.style.color = "#fefefe"
+    res.style.backgroundColor = "#fefefe"
+    res.style.color = "#39392d"
+    calc.style.color = "#39392d"
+    body.style.backgroundColor = "#17062a"
+    left[0].style.color = "#39392d"
+    theme[0].style.color = "#39392d"
+    bkk.style.backgroundColor = "#d3cdcd"
     for (let i = 0; i < numbers.length; i++) {
       numbers[i].style.color = "#fee83a"
       numbers[i].style.background = "#331b4d"
