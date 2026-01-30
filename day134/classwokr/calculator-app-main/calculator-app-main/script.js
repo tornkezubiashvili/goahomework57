@@ -59,6 +59,7 @@ gayofa.addEventListener("click", function () {
 
 equal.addEventListener("click", function () {
   res.textContent = eval(fin)
+  fin = res.textContent
 })
 
 reset.addEventListener("click", function () {
