@@ -17,6 +17,7 @@ let bkk = document.getElementById("bk")
 let func = document.getElementById("func")
 
 
+
 let fin = ""
 
 for (let i = 0; i < numbers.length; i++) {
@@ -97,20 +98,26 @@ btn.addEventListener("click", function () {
     delet.style.color = "#fefefe"
     reset.style.backgroundColor = "#56077c"
     reset.style.color = "#fefefe"
+    reset.style.borderBottom = " 3px solid  #661b7e"
     res.style.backgroundColor = "#fefefe"
     res.style.color = "#39392d"
-    calc.style.color = "#39392d"
+    calc.style.color = "#fee83a"
     body.style.backgroundColor = "#17062a"
-    left[0].style.color = "#39392d"
-    theme[0].style.color = "#39392d"
+    left[0].style.color = "#fee83a"
+    theme[0].style.color = "#fee83a"
     bkk.style.backgroundColor = "#d3cdcd"
+    btn.style.backgroundColor = "#00e0cb"
+    equal.style.backgroundColor = "#00decf"
+    equal.style.color = "#000000"
     for (let i = 0; i < numbers.length; i++) {
       numbers[i].style.color = "#fee83a"
       numbers[i].style.background = "#331b4d"
+      numbers[i].style.borderBottom = " 3px solid  #661b7e"
     }
     for (let i = 0; i < operation.length; i++) {
       operation[i].style.color = "#fee83a"
       operation[i].style.background = "#331b4d"
+      operation[i].style.borderBottom = " 3px solid  #661b7e"
     }
   }
 });
