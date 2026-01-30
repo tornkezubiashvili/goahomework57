@@ -27,37 +27,47 @@ for (let i = 0; i < numbers.length; i++) {
   })
 }
 
-plus.addEventListener("click", function () {
-  fin += "+"
-  res.textContent = fin
-});
 minus.addEventListener("click", function () {
   fin += "-"
   res.textContent = fin
-});
-x.addEventListener("click", function () {
-  fin += "*"
+})
+
+plus.addEventListener("click", function () {
+  fin += "+"
   res.textContent = fin
-});
+})
+
 dot.addEventListener("click", function () {
   fin += "."
   res.textContent = fin
-});
-gayofa.addEventListener("click", function () {
-  fin += "/"
+})
+
+x.addEventListener("click", function () {
+  fin += "*"
   res.textContent = fin
-});
+})
+
 delet.addEventListener("click", function () {
   fin = fin.slice(0, -1)
   res.textContent = fin
-});
+})
+
+gayofa.addEventListener("click", function () {
+  fin += "/"
+  res.textContent = fin
+})
+
+equal.addEventListener("click", function () {
+  res.textContent = eval(fin)
+})
+
 reset.addEventListener("click", function () {
   res.textContent = ""
   fin = ""
-});
-equal.addEventListener("click", function () {
-  res.textContent = eval(fin)
-});
+})
+
+
+
 
 let bk = document.getElementById("bk")
 let btn = document.getElementById("btn")
@@ -66,7 +76,7 @@ let operation = document.getElementsByClassName("operation");
 let position = 1
 
 btn.addEventListener("click", function () {
-  position++;
+  position++
   if (position == 1) {
     bk.style.justifyContent = "start"
     for (let i = 0; i < numbers.length; i++) {
