@@ -21,7 +21,7 @@ let func = document.getElementById("func")
 let fin = ""
 
 for (let i = 0; i < numbers.length; i++) {
-  numbers[i].addEventListener("click", function (e) {
+  numbers[i].addEventListener("click", function () {
     fin += numbers[i].textContent
     res.textContent = fin
   })
