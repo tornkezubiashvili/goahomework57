@@ -16,6 +16,7 @@ body {
     justify-content: center;
     font-family: "Barlow Semi Condensed", sans-serif;
     background-color: #192346;
+    overflow-x: hidden;
 }
 
 .scoreDIV {
@@ -115,4 +116,103 @@ body {
 
 .choiceIMG img:active {
     transform: scale(1.1);
+}
+
+button {
+    width: 170px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    color: blue;
+    cursor: pointer;
+}
+
+button:hover {
+    color: red;
+}
+
+.buttonDIV {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttonDIV h1 {
+    color: white;
+    font-size: 50px;
+
+}
+
+@media (max-width: 850px) {
+    .scoreDIV {
+        width: 370px;
+        height: 130px;
+    }
+
+    .scoreDIV div h2 {
+        font-size: 25px;
+
+    }
+
+    .scoreDIV h1 {
+        font-size: 25px;
+    }
+
+    .scoreDIV p {
+        font-size: 17px;
+    }
+
+    .scoreDIV div {
+        width: 90px;
+        height: 90px;
+
+    }
+}
+
+@media (max-width: 450px) {
+    .scoreDIV {
+        width: 350px;
+        height: 130px;
+    }
+    img {
+        width: 150px;
+    }
+
+    .ChoiceDiv {
+        gap: 0px;
+        margin-bottom: 200px;
+    }
+
+    .buttonDIV {
+        position: relative;
+        top: 200px;
+        text-align: center;
+    }
+
+    .img1{
+        text-align: center;
+        padding-left: 40px;
+        
+    }
+    .img2{
+       text-align: center;
+       padding-right: 40px;
+    }
+
+    button {
+        width: 120px;
+        height: 30px;
+        font-size: 11px;
+    }
+    .choiceIMG img{
+        width: 100px;
+    }
+    .choiceIMG h2{
+        font-size: 15px;
+    }
+    .buttonDIV h1{
+        font-size: 35px;
+    }
 }
