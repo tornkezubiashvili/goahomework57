@@ -11,10 +11,11 @@ let usrARR = [
     "image0.png"
 ]
 
-for(let i = 0; i < usrARR.length;i++){
-    finger[1].addEventListener("click",function(){
+for (let i = 0; i < finger.length; i++) {
+    console.log(2)
+    finger[i].addEventListener("click", function () {
         FingerDIV.style.display = "none"
         ChoiceDiv.style.display = "block"
+        console.log(2)
     })
 }
-
