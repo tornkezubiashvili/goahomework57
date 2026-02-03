@@ -12,17 +12,16 @@ let AGAIN = document.getElementById("AGAIN")
 let restart = document.getElementById("restart")
 
 
+
 let usrARR = [
     "image5.png",
     "image2.png",
     "image0.png"
 ]
 
+
 let num = 0
 
-
-
-// let randomfinger = usrARR[randomchoice]
 
 function funcrendom(){
     randomchoice = Math.floor(Math.random()* 3)
