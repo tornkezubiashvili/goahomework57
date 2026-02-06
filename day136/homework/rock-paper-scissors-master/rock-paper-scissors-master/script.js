@@ -12,7 +12,6 @@ let AGAIN = document.getElementById("AGAIN")
 let restart = document.getElementById("restart")
 
 
-
 let usrARR = [
     "image5.png",
     "image2.png",
