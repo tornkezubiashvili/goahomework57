@@ -10,6 +10,6 @@
 
 // (აქ უკვე ჩაშენებული ternary დასჭირდებათ რაზეც  გაკვეთილზეც ვისაუბრეთ
 
-let score = 5
+let score = 24
 
 score >= 90 ? console.log("Excellent"): score >= 70 ? console.log("Good") : console.log("Fail")
