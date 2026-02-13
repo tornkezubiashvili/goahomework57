@@ -16,7 +16,7 @@ for (let value of values) {
   if (value) {
     truthyValues.push(value)
   } else {
-    falsyValues.push(value);
+    falsyValues.push(value)
   }
 }
 
