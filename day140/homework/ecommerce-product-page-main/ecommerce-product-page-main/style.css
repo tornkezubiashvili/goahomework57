@@ -56,6 +56,7 @@ nav a {
 
 .cartIMG {
     width: 30px;
+    cursor: pointer;
 }
 
 .avatarIMG {
@@ -172,6 +173,10 @@ main {
     font-weight: 900;
 }
 
+.plusminus img {
+    cursor: pointer;
+}
+
 .add {
     display: flex;
     align-items: center;
@@ -182,10 +187,52 @@ main {
     border: none;
     background-color: hsl(26, 100%, 55%);
     gap: 20px;
+    cursor: pointer;
 }
 
-.arrowdiv{
+.arrowdiv {
     display: none;
+}
+
+#cartDIV {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid hsl(0, 0%, 100%);
+    position: absolute;
+    left: 1400px;
+    bottom: 680px;
+    display: none;
+}
+
+#cartDIV h3 {
+    padding: 20px 0px;
+    border-bottom: 1px solid hsl(217, 8%, 68%);
+}
+
+#priceDIV {
+    display: flex;
+    gap: 10px;
+
+}
+
+#priceDIV img {
+    width: 70px;
+    border-radius: 10px;
+}
+
+#info p {
+    color: hsl(216, 7%, 61%);
+
+}
+
+#info div {
+    display: flex;
+    gap: 5px;
+    color: hsl(216, 7%, 61%);
+}
+#info div span{
+    color: black;
 }
 
 @media (max-width: 1150px) {
@@ -208,7 +255,7 @@ main {
         display: none;
     }
 
-    .arrowdivleft{
+    .arrowdivleft {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -220,26 +267,28 @@ main {
         display: inline-block;
         left: 20px;
         top: 300px;
-        
+
     }
-    .arrowdivright{
+
+    .arrowdivright {
         position: absolute;
         z-index: 2;
         background-color: rgb(255, 255, 255);
         width: 50px;
         height: 50px;
         display: inline-block;
-        
+
     }
+
     .leftarrow {
         width: 15px;
         margin: 0 auto;
-        
-        
+
+
     }
 
     .rightarrow {
-       
+
         width: 15px;
     }
 
