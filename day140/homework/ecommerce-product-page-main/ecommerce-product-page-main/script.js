@@ -4,6 +4,7 @@ let quantity = document.getElementById("quantity")
 let fullprice = document.getElementById("span")
 let p = document.getElementById("p")
 let h1 = document.getElementById("h1")
+let cartIMG = document.getElementById("cartIMG")
 
 
 let minus = document.getElementById("minus")
@@ -54,3 +55,7 @@ add.addEventListener("click",function(){
     cartDIV.style.display = "block"
 })
 
+cartIMG.addEventListener("click",function(){
+    fullprice.textContent = `$ ${125 * result}.00`
+    cartDIV.style.display = "block"
+})
