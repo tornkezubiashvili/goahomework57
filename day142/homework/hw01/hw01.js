@@ -19,13 +19,16 @@ let num = 1
 
 button.addEventListener("click",function(){
     let random = Math.floor(Math.random()*6)
+    let div = document.createElement("div")
+    newDIV.appendChild(div)
     img.src = srcARRY[random]
     let h2 = document.createElement("h2")
     h2.textContent = `Roll ${num}:`
-    newDIV.appendChild(h2)
+    div.appendChild(h2)
     let img2 = document.createElement("img")
     img2.src = srcARRY[random]
-    newDIV.appendChild(img2)
+    div.appendChild(img2)
+    newDIV.appendChild(div)
     num +=1
 })
 
