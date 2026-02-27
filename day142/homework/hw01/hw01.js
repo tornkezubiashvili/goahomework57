@@ -13,14 +13,13 @@ let srcARRY = [
     "img/6.png"
 ]
 
-let num = 0
+let num = 1
 
 
 
 button.addEventListener("click",function(){
     let random = Math.floor(Math.random()*6)
     img.src = srcARRY[random]
-    num +=1
     let h2 = document.createElement("h2")
     h2.textContent = `Roll ${num}:`
     newDIV.appendChild(h2)
