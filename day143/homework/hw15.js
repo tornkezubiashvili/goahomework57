@@ -2,7 +2,7 @@
 
 const createPerson = (name, age) => ({ name, age })
 
-console.log(createPerson("ნიკა", 25))
+console.log(createPerson("ნიკა", 17))
 
 
 console.log(createPerson("მარიამ", 30))

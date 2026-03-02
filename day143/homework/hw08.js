@@ -9,17 +9,17 @@ let color = prompt("შეიყვანე ფერი (red, green, blue):");
 
 switch (color) {
   case "red":
-    console.log("წითელი ");
-    break;
+    console.log("წითელი ")
+    break
 
   case "green":
-    console.log("მწვანე ");
-    break;
+    console.log("მწვანე ")
+    break
 
   case "blue":
-    console.log("ლურჯი ");
-    break;
+    console.log("ლურჯი ")
+    break
 
   default:
-    console.log("ასეთი ფერი სისტემაში არ არის");
+    console.log("ასეთი ფერი სისტემაში არ არის")
 }

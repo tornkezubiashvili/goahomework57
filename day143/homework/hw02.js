@@ -12,16 +12,21 @@
 let num = Number(prompt("შეიყვანე რიცხვი 1-12: "))
 
 switch (num) {
-    case 12, 1, 2:
+    case 12:
+    case 1:
+    case 2:
         console.log("ზამთარი")
-        break
+        break;
     case 3, 4, 5:
         console.log("გაზაფხული")
-        break
+        break;
     case 6, 7, 8:
         console.log("ზაფხული")
-        break
+        break;
     case 9, 10, 11:
         console.log("შემოდგომა")
-        break
+        break;
+    default:
+        console.log("რიცხვი არასწორია")
+        
 }
