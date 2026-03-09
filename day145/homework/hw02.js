@@ -37,7 +37,6 @@ const{name,faculty:{title,head:{name:headname}},students:[{name:studentname,grad
 
 console.log(name)
 console.log(title)
-
 console.log(headname)
 console.log(studentname)
 console.log(math)
