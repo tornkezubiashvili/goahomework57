@@ -28,15 +28,11 @@ const company = {
   ]
 }
 
-let {name,location,location:{country,city,city:{name:cityname,street}}} = company
+const { name, location: { country, city: { name: cityName, street } }, employees: [{ name: name1 }, { age: Age2 }] } = company
 
 
 console.log(country)
-console.log(cityname)
-
-console.log( street)
-
-console.log(name3)
-console.log(age2)
-
-
+console.log(cityName)
+console.log(street)
+console.log(name1)
+console.log(Age2)
