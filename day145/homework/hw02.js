@@ -33,5 +33,14 @@ const university = {
   ]
 }
 
-const{name,faculty,faculty:{title}}
+const{name,faculty:{title,head:{name:headname}},students:[{name:studentname,grades:{math,js}}]} =university
+
+console.log(name)
+console.log(title)
+
+console.log(headname)
+console.log(studentname)
+console.log(math)
+console.log(js)
+
 
