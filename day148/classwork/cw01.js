@@ -12,8 +12,7 @@ let FilterName = names.filter(name => name.length > 5 && name[0] === "g")
 
 console.log(FilterName)
 
-
 let FilterName2 = names.filter(name2 =>{
-    return  name2.length > 5 && name2[0] === "g"
+    return name2.length > 5 && name2[0] === "g"
 })
 console.log(FilterName2)
