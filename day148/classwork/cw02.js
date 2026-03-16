@@ -2,12 +2,13 @@
 
 // თუ რიცხვი არის ლუწი ან (არის 50ზე მეტი და 100 ზე ნაკლები)
 
-let numbers = [56, 27, 52, 33, 102, 7];
+let numbers = [56, 27, 52, 33, 102, 7]
 
 let index = numbers.findIndex(num => 
     num % 2 === 0 || (num > 50 && num< 100)
 )
 console.log(index)
+
 let index2 = numbers.findIndex(num2 => num2 % 2 === 0 || (num2> 50 && num2 < 100))
 
 console.log(index2)
