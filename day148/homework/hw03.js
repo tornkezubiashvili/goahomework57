@@ -12,7 +12,7 @@ const articles = [
 
 
 let FIlterArticles = articles.filter(art =>{
-    return art.content.includes("JavaScript")
+    return art.content.toLowerCase().includes("javascript")
 })
 
 console.log(FIlterArticles)

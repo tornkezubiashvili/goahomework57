@@ -18,9 +18,9 @@ const employees = [
 
 let FilterEmployees = employees.filter(employ => {
     if(employ.department === "IT" && employ.salary < 1500 && employ.age < 30){
-        return employ.name
+        console.log(employ.name) 
     }
 })
 
-console.log(FilterEmployees)
+
 
