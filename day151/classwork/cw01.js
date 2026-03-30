@@ -32,7 +32,7 @@ class User {
 
 let user1 = new User("ბონდო", 12);
 
-console.log(user1)
+
 
 form.addEventListener("submit", (e) => {
 
