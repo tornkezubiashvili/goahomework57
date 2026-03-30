@@ -10,10 +10,10 @@
 
 // ამ ყველაფერს დაამატეთ dom და html ის ინფუთებით შეიყვანეთ მონაცემები
 
-let form = document.getElementById("form");
-let nameinput = document.getElementById("name");
-let ageinput = document.getElementById("age");
-let submitBtn = document.getElementById("submit");
+let form = document.getElementById("form")
+let nameinput = document.getElementById("name")
+let ageinput = document.getElementById("age")
+let submitBtn = document.getElementById("submit")
 
 class User {
     constructor(name, age) {
@@ -30,7 +30,7 @@ class User {
     }
 }
 
-let user1 = new User("ბონდო", 12);
+let user1 = new User("ბონდო", 12)
 
 
 
