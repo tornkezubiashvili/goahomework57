@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    padding-top: 50px;
+    background-color: #f0f0f0;
+}
+
+.kalkulatori {
+    display: inline-block;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: white;
+}
+
+#ekrani {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding-right: 5px;
+}
+
+button {
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+    cursor: pointer;
+}
