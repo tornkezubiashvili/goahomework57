@@ -1,73 +1,82 @@
-class Chemikalkulatori {
-    constructor() {
-        this.boloRicxvi = ""
-        this.operacia = ""
-        this.axaliRicxvi = true
-    }
-
-
-    bechda(cifri) {
-        let ekrani = document.getElementById("ekrani")
+class Calculator {
+    constructor(displayId, containerId) {
+        this.displayElement = document.getElementById(displayId)
+        this.containerElement = document.getElementById(containerId)
         
-        if (this.axaliRicxvi == true) {
-            ekrani.value = cifri
-            this.axaliRicxvi = false
-        } else {
-            ekrani.value = ekrani.value + cifri
+        this.currentValue = ''
+        this.previousValue = ''
+        this.operator = undefined
+
+        this.containerElement.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'BUTTON') return
+            this.handleInput(e.target.innerText)
+        });
+    }
+
+    handleInput(input) {
+        if (!isNaN(input) || input === '.') {
+            this.appendNumber(input)
+        } else if (['+', '-', '*', '/'].includes(input)) {
+            this.setOperator(input)
+        } else if (input === '=') {
+            this.compute()
+        } else if (input === 'C') {
+            this.clear()
+        } else if (input === 'DEL') {
+            this.delete()
         }
     }
 
-
-    airchieOp(simbolo) {
-        let ekrani = document.getElementById("ekrani")
-        this.boloRicxvi = ekrani.value
-        this.operacia = simbolo
-        this.axaliRicxvi = true
+    appendNumber(number) {
+        if (number === '.' && this.currentValue.includes('.')) return
+        this.currentValue = this.currentValue.toString() + number.toString()
+        this.updateDisplay()
     }
 
-   
-    itvale() {
-        let ekrani = document.getElementById("ekrani")
-        let pirveli = parseFloat(this.boloRicxvi)
-        let meore = parseFloat(ekrani.value)
-        let pasuxi = 0
+    setOperator(op) {
+        if (this.currentValue === '') return;
+        if (this.previousValue !== '') this.compute()
+        this.operator = op;
+        this.previousValue = this.currentValue;
+        this.currentValue = ''
+    }
 
-        if (this.operacia == "+") pasuxi = pirveli + meore
-        if (this.operacia == "-") pasuxi = pirveli - meore
-        if (this.operacia == "*") pasuxi = pirveli * meore
-        if (this.operacia == "/") {
-            if (meore == 0) pasuxi = "Error"
-            else pasuxi = pirveli / meore
+    compute() {
+        let result;
+        const prev = parseFloat(this.previousValue)
+        const current = parseFloat(this.currentValue)
+        if (isNaN(prev) || isNaN(current)) return
+
+        switch (this.operator) {
+            case '+': result = prev + current; break;
+            case '-': result = prev - current; break;
+            case '*': result = prev * current; break;
+            case '/': result = current === 0 ? "Error" : prev / current; break
+            default: return;
         }
 
-        ekrani.value = pasuxi
-        this.axaliRicxvi = true
+        this.currentValue = result.toString()
+        this.operator = undefined;
+        this.previousValue = ''
+        this.updateDisplay()
+    }
+
+    clear() {
+        this.currentValue = ''
+        this.previousValue = ''
+        this.operator = undefined
+        this.updateDisplay()
+    }
+
+    delete() {
+        this.currentValue = this.currentValue.toString().slice(0, -1)
+        this.updateDisplay()
+    }
+
+    updateDisplay() {
+        this.displayElement.innerText = this.currentValue || '0';
     }
 }
 
 
-let chemiKalk = new Chemikalkulatori()
-
-
-function dawereRicxvi(n) {
-    chemiKalk.bechda(n)
-}
-
-function miutiteOp(op) {
-    chemiKalk.airchieOp(op)
-}
-
-function gamotvale() {
-    chemiKalk.itvale()
-}
-
-function washala() {
-    document.getElementById("ekrani").value = "0"
-    chemiKalk.axaliRicxvi = true
-}
-
-function tsashalaErti() {
-    let ek = document.getElementById("ekrani")
-    ek.value = ek.value.slice(0, -1)
-    if (ek.value == "") ek.value = "0"
-}
+new Calculator('display', 'buttons');
