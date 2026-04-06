@@ -6,13 +6,15 @@ class TodoApp {
 
         
         this.button.addEventListener('click', () => {
-            this.addTask()
-        });
+            this.add()
+        })
     }
 
-    addTask() {
+    add() {
         const text = this.input.value
-        if (text === "") return
+        if (text === ""){
+            return
+        } 
 
         
         const li = document.createElement('li')
@@ -24,9 +26,6 @@ class TodoApp {
         editBtn.innerText = "Edit"
         deleteBtn.innerText = "Delete"
 
-       
-        
-        
         deleteBtn.addEventListener('click', () => {
             li.remove()
         });
@@ -58,7 +57,7 @@ class TodoApp {
             button.innerText = "Save"
         } else {
             
-            const inputField = span.firstChild;
+            const inputField = span.firstChild
             if (inputField.value !== "") {
                 span.innerText = inputField.value
                 button.innerText = "Edit"
