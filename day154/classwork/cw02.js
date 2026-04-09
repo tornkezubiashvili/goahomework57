@@ -15,9 +15,11 @@ let map = new Map()
 
 for(let i of arr){
     if(!map.has(i)){
-        map.set(i,1)
+        map.set(i,0)
     }
     if(map.has(i)){
-        map.set(i,)
+        map.set(i,map.get(i)+1)
     }
 }
+
+console.log(map)
