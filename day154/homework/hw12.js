@@ -14,7 +14,7 @@ let word = "javascript";
 
 let map = new Map()
 
-for(let i of arr){
+for(let i of word){
     if(!map.has(i)){
         map.set(i,0)
     }
