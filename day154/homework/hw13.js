@@ -7,14 +7,9 @@
 // key = "even" / "odd"
 // value = შესაბამისი რიცხვების მასივი
 
-
 let numbers = [1,2,3,4,5,6,7,8,9];
 
-
-let map = new Map([
-    ["even",0],
-    ["odd",0]
-])
+let map = new Map()
 
 let ev = []
 let od = []
@@ -29,8 +24,5 @@ for(let i of numbers){
 
 map.set("even",ev)
 map.set("odd",od)
-
-
-
 
 console.log(map)
