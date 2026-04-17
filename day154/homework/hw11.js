@@ -19,8 +19,8 @@ let map = new Map([
 
 let num = 0
 
-map.forEach((v) =>{
-    num +=v
+map.forEach((v) => {
+  num += v
 })
 
 console.log(num / map.size)
