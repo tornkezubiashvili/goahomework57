@@ -33,34 +33,42 @@
 
 
 
-let player1Bag = new Set(["Bloodthorn", "Water", "Glowspore", "Stormbark","Sparkthorn","Poison"])
-let player2Bag = new Set(["Bloodthorn", "Water","Thunderseed","Dark","Sparkthorn","Rustbloom"])
+let player1Bag = new Set(["Bloodthorn", "Water", "Glowspore", "Stormbark", "Sparkthorn", "Poison"])
+let player2Bag = new Set(["Bloodthorn", "Water", "Thunderseed", "Dark", "Sparkthorn", "Rustbloom"])
 
 let NewBag = new Set()
 
-function createGuildStash(bag1, bag2){
-    for(let i of bag1){
+function createGuildStash(bag1, bag2) {
+    for (let i of bag1) {
         NewBag.add(i)
     }
-    for(let i of bag2){
+    for (let i of bag2) {
         NewBag.add(i)
     }
 }
 createGuildStash(player1Bag, player2Bag)
 
-let healthPotionRecipe = new Set(["Water", "Bloodthorn", "Crystal"])
+let healthPotionRecipe = new Set(["Water", "Bloodthorn","Crystal"])
 
 let bolean = true
 
-function canCraft(recipe, stash){
+let needingredients = new Set()
+
+function canCraft(recipe, stash) {
     recipe.forEach(items => {
-        stash.has(items)? bolean = true: bolean = false
-        if(bolean == false){
+        if (!stash.has(items)) {
+            bolean = false
             return
-        }
+            
+        } 
+        
+        
+
     })
-    console.log(bolean)
-    
+
+
 }
+
+console.log(needingredients)
 
 canCraft(healthPotionRecipe, NewBag)
