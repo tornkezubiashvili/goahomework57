@@ -46,17 +46,3 @@
 
 
 
-const loginLogs = [
-    { userId: 1, ip: "192.168.1.10" },
-    { userId: 2, ip: "10.0.0.5" },
-    { userId: 3, ip: "192.168.1.10" }, 
-    { userId: 4, ip: "172.16.0.1" },
-    { userId: 5, ip: "10.0.0.5" }      
-]
-
-let loginMap = new Map()
-
-for(let i of loginLogs){
-    loginMap.set(i)
-}
-console.log(loginMap.get("userId:1"))
