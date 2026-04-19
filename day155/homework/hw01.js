@@ -34,6 +34,7 @@
 
 
 let player1Bag = new Set(["Bloodthorn", "Water", "Glowspore", "Stormbark", "Sparkthorn", "Poison"])
+
 let player2Bag = new Set(["Bloodthorn", "Water", "Thunderseed", "Dark", "Sparkthorn", "Rustbloom"])
 
 let NewBag = new Set()
@@ -105,15 +106,17 @@ console.log(TradeSet)
 
 const gatheredLoot = ["Wood", "Rotten Flesh", "Bloodthorn", "Mud", "Wood", "Crystal", "Mud"]
 
-let trashItems = new Set("Rotten Flesh","Mud")
+let trashItems = new Set(["Rotten Flesh","Mud"])
 
 let set = new Set()
 
 
 function cleanLoot(lootArray, trashSet){
-    lootArray.forEach(element => {
-        !trashItems.has(element)? set.add(element):console.log(222)
-    })
+    for(let i of lootArray){
+        if(!trashSet.has(i)){
+            set.add(i)
+        }
+    }
 }
 cleanLoot(gatheredLoot, trashItems)
 console.log(set)
