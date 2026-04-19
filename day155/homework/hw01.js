@@ -48,27 +48,72 @@ function createGuildStash(bag1, bag2) {
 }
 createGuildStash(player1Bag, player2Bag)
 
-let healthPotionRecipe = new Set(["Water", "Bloodthorn","Crystal"])
+let healthPotionRecipe = new Set(["Water", "Bloodthorn", "Crystal"])
 
 let bolean = true
 
-let needingredients = new Set()
 
 function canCraft(recipe, stash) {
     recipe.forEach(items => {
         if (!stash.has(items)) {
             bolean = false
             return
-            
-        } 
-        
-        
+
+        }
 
     })
+}
 
+
+
+canCraft(healthPotionRecipe, NewBag)
+
+let needingredients = new Set()
+function getMissingIngredients(recipe, stash) {
+    recipe.forEach(items => {
+        if (!stash.has(items)) {
+            needingredients.add(items)
+
+        }
+
+    })
+    console.log(needingredients)
 
 }
 
-console.log(needingredients)
+getMissingIngredients(healthPotionRecipe, NewBag)
 
-canCraft(healthPotionRecipe, NewBag)
+let TradeSet = new Set()
+function getTradeableItems(bag1, bag2) {
+    bag1.forEach(items => {
+        if (!bag2.has(items)) {
+            TradeSet.add(items)
+        }
+    })
+    bag2.forEach(items => {
+        if (!bag1.has(items)) {
+            TradeSet.add(items)
+        }
+    })
+}
+
+
+getTradeableItems(player1Bag, player2Bag)
+
+
+console.log(TradeSet)
+
+const gatheredLoot = ["Wood", "Rotten Flesh", "Bloodthorn", "Mud", "Wood", "Crystal", "Mud"]
+
+let trashItems = new Set("Rotten Flesh","Mud")
+
+let set = new Set()
+
+
+function cleanLoot(lootArray, trashSet){
+    lootArray.forEach(element => {
+        !trashItems.has(element)? set.add(element):console.log(222)
+    })
+}
+cleanLoot(gatheredLoot, trashItems)
+console.log(set)
