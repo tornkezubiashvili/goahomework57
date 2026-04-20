@@ -44,5 +44,79 @@
 
 
 
+const loginLogs = [
+    { userId: 1, ip: "192.168.1.10" },
+    { userId: 2, ip: "10.0.0.5" },
+    { userId: 3, ip: "192.168.1.10" }, // დუბლიკატი IP
+    { userId: 4, ip: "172.16.0.1" },
+    { userId: 5, ip: "10.0.0.5" }      // დუბლიკატი IP
+];
 
 
+
+let ip = loginLogs.map(element => {
+    return element.ip
+})
+
+let onlyip = [...new Set(ip)]
+
+
+console.log(onlyip)
+
+
+function findMastermind(setA, setB, setC) {
+    for (let i of setA) {
+        if (setB.has(i) && setC.has(i)) {
+            console.log(i)
+        }
+    }
+}
+let hackerA = new Set(["ip1", "ip2", "ip3"]);
+let hackerB = new Set(["ip2", "ip3", "ip4"]);
+let hackerC = new Set(["ip3", "ip5"]);
+findMastermind(hackerA, hackerB, hackerC)
+
+
+function unicueIP(A, B, C) {
+    let arry = []
+    let ollIP = [...A, ...B, ...C]
+
+    for (let i of ollIP) {
+        let count = 0
+
+        if (A.has(i)) {
+            count++
+        }
+        if (B.has(i)) {
+            count++
+        }
+        if (C.has(i)) {
+            count++
+        }
+        if (count === 1) {
+            arry.push(i)
+        }
+    }
+
+    console.log(arry)
+
+}
+
+unicueIP(hackerA, hackerB, hackerC)
+
+
+const traceRoute = ["Server_Alpha", "Server_Beta", "Server_Gamma", "Server_Alpha", "Server_Delta"];
+function detectLoop(routeArray){
+    let visited = new Set()
+
+    for(let i of routeArray){
+        if(visited.has(i)){
+            console.log(`"გაფრთხილება: ნაპოვნია მარყუჟი სერვერზე ${i}!"`)
+            return
+        }else{
+            visited.add(i)
+        }
+    }
+}
+
+detectLoop(traceRoute)
