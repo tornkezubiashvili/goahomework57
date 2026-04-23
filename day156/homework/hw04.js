@@ -10,15 +10,21 @@ let input = document.getElementById("input")
 let button = document.getElementById("button")
 let div = document.getElementById("div")
 
+let list = []
+let li = document.createElement("li")
+
+for(let i of list){
+    li.textContent = i
+}
+button.addEventListener("click", function () {
+
+    li.textContent = input.value
+    div.appendChild(li)
+    list.push(li.textContent)
+
+    localStorage.setItem("lst", list)
+    console.log(localStorage.getItem("lst"))
 
 
-button.addEventListener("click",function(){
-    let p = document.createElement("p")
-    let inpvalue = input.value
-    localStorage.setItem("crateP",inpvalue)
-    p.textContent = localStorage.getItem("crateP")
-    div.appendChild(p)
 
-    localStorage.setItem("add",div.appendChild(p))
-    
 })
