@@ -18,7 +18,7 @@ let button = document.getElementById("button")
 let div = document.getElementById("div")
 
 let list = JSON.parse(localStorage.getItem("lst")) || []
-let name = "giorgi" || []
+
 
 function rander() {
     div.innerHTML = ""
