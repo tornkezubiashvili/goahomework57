@@ -14,7 +14,7 @@ let minus = document.getElementById("minus")
 let reset = document.getElementById("reset")
 
 let num = localStorage.getItem("num")
-count.textContent = localStorage.getItem("num")
+count.textContent = num 
 
 plus.addEventListener("click",function(){
     num ++
