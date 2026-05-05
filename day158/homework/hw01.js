@@ -1,14 +1,15 @@
 // 1) ააწყოთ register და login გვერდები თავისი ფუნქციონალით კარგი დიზაინით და + localstorage
 
-let form = document.getElementById("form")
+let RegisterForm = document.getElementById("Registerform")
 
-let LocalArray = JSON.parse(localStorage.getItem("acc")) || []
+let Loginform = document.getElementById("Loginform")
 
-form.addEventListener("submit", function (e) {
+RegisterForm.addEventListener("submit",function(e){
     e.preventDefault()
-    let targ = e.target
-    LocalArray.push(targ)
-    localStorage.setItem("acc", JSON.stringify(LocalArray))
-    console.log(targ)
+    let RegisterEmail =  e.target.email.value
+    let Registerpassword =  e.target.password.value
+    localStorage.setItem("RegisterEmail",RegisterEmail)
+    localStorage.setItem("Registerpassword",Registerpassword)
+
 })
 
