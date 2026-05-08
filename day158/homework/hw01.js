@@ -24,11 +24,6 @@ RegisterForm.addEventListener("submit", function (e) {
             LoginDiv.style.display = "block"
         })
     }
-
-
-
-
-
 })
 
 
