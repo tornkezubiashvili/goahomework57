@@ -4,15 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
     <link rel="stylesheet" href="hw01.css">
 </head>
 
 <body>
-    <div>
-        <a href="register.html"><button>register</button></a>
-        <a href="login.html"><button>login</button></a>
+    <div id="RegisterDiv">
+        <h1>Register</h1>
+        <form id="Registerform" class="form">
+            <div>
+                <input type="email" name="email" placeholder="email">
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <button type="submit" id="RegisterButton">click</button>
+
+        </form>
     </div>
+    <div id="LoginDiv">
+        <h1>Login</h1>
+        <form id="Loginform" class="form">
+            <div>
+                <input type="email" name="email" placeholder="email">
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <button type="submit" id="LoginButton">click</button>
+
+        </form>
+    </div>
+
+
     <script src="hw01.js"></script>
 </body>
 
