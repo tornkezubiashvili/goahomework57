@@ -1,0 +1,173 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #0c0c0c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.HederDiv {
+    width: 100%;
+    display: flex;
+    padding: 30px 150px;
+    gap: 20px;
+}
+
+.HederDiv h1 {
+    color: white;
+}
+
+.MainDiv {
+    margin-top: 100px;
+    width: 650px;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #3b352f;
+    padding: 0px 40px;
+
+}
+
+.TaskDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.TaskDiv h1 {
+    color: rgb(195, 190, 190);
+    font-size: 40px;
+}
+
+.TaskDiv h3 {
+    color: rgb(195, 190, 190);
+    font-size: 28px;
+}
+
+.sircl {
+    background-color: #85a435;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sircl h1 {
+    color: #e8e3e3;
+    font-size: 80px;
+    font-weight: 100;
+}
+
+#form {
+    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form input {
+    background-color: #212834;
+    border: none;
+    height: 50px;
+    width: 580px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.PlusButton {
+    background-color: #85a435;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+}
+
+.PlusButton img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#AddDiv {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+
+}
+
+#AddDiv p {
+    background-color: greenyellow;
+}
+
+.InpDiv {
+    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #766e5f;
+    padding: 15px 15px;
+}
+
+.TextDiv {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.SirclDiv {
+    background-color: #22c55e;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.imgdiv {
+    display: flex;
+    gap: 10px;
+}
+
+.imgdiv img {
+    width: 35px;
+    filter: brightness(1.9);
+    cursor: pointer;
+}
+
+#DeleteOll {
+    background-color: #212834;
+    border: none;
+    height: 70px;
+    width: 650px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid red;
+    transition: 0.5s;
+}
+
+#DeleteOll:hover {
+    letter-spacing: 10px;
+    color: red;
+    font-weight: 900;
+    
+}
