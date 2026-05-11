@@ -18,13 +18,15 @@ function createElement(text) {
     h3.style.color = "white"
 
     let imgdiv = document.createElement("div")
+
     InpDiv.appendChild(imgdiv)
-    let editimg = document.createComment("img")
+    let editimg = document.createElement("img")
     editimg.src = "img/edit.png"
-    let deleteimg = document.createComment("img")
+    let deleteimg = document.createElement("img")
     deleteim.src = "img/delete.png"
     imgdiv.appendChild(editimg)
     imgdiv.appendChild(deleteimg)
+
 }
 
 form.addEventListener("submit", function (e) {
