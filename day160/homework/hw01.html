@@ -9,33 +9,56 @@
 </head>
 
 <body>
-    <div class="HederDiv">
+    <header class="HederDiv">
         <img src="img/check.png" alt="">
         <h1>TODO</h1>
-    </div>
-    <div class="MainDiv">
-        <div class="TaskDiv">
-            <h1>Task Done</h1>
-            <h3>Keep it up</h3>
+    </header>
+
+    <main>
+
+
+        <section class="firstsection">
+
+
+            <div class="MainDiv">
+                <div class="TaskDiv">
+                    <h1>Task Done</h1>
+                    <h3>Keep it up</h3>
+                </div>
+                <div class="sircl">
+                    <h1 id="left">0</h1>
+                    <h1>/</h1>
+                    <h1 id="right">0</h1>
+                </div>
+            </div>
+
+
+
+            <button id="DeleteOll">Delete Oll</button>
+
+            <form id="form">
+                <input type="text" name="input" placeholder="Write your text task" id="input">
+                <button type="submit" class="PlusButton"><img src="img/plus.png" alt=""></button>
+            </form>
+        </section>
+
+        <section class="twosection">
+            <div id="selectdiv">
+                <p>Filter:</p>
+                <select id="todofilter">
+                    <p>Filter:</p>
+                    <option value="task">uncomplited tasks</option>
+                    <option value="completed-task">completed tasks</option>
+                </select>
+            </div>
+
+
+        </section>
+        
+        <div id="AddDiv">
+
         </div>
-        <div class="sircl">
-            <h1 id="left">0</h1>
-            <h1>/</h1>
-            <h1 id="right">0</h1>
-        </div>
-    </div>
-
-
-
-    <button id="DeleteOll">Delete Oll</button>
-    <form id="form">
-        <input type="text" name="input" placeholder="Write your text task" id="input">
-        <button type="submit" class="PlusButton"><img src="img/plus.png" alt=""></button>
-    </form>
-
-    <div id="AddDiv">
-
-    </div>
+    </main>
 
     <script src="hw01.js"></script>
 </body>
