@@ -9,26 +9,34 @@ let array = JSON.parse(localStorage.getItem("LocalInput")) || []
 let filter = localStorage.getItem("filter") || "tasks"
 
 right.textContent = array.length
+let complitedArray = array.filter((item) =>{
+    return item.isComplited === true
+})
 
-function filterfunc() {
+left.textContent = complitedArray.length
+
+function filterfunc(filtertype) {
     AddDiv.innerHTML = ""
-    if (todofilter.value === "completed-task") {
-        for (let i in array) {
-            if (array[i].isComplited === true) {
-                createElement(array[i].value, i)
+    if (filtertype === "completed-task") {
+        for (let todoitem of array) {
+            if (todoitem.isComplited === true) {
+                createElement(todoitem.value, array.indexOf(todoitem))
+                console.log(todoitem.value)
+                
             }
         }
     } else {
-        for (let i in array) {
-            if (array[i].isComplited === false) {
-                createElement(array[i].value, i)
+        for (let todoitem of array) {
+            if (todoitem.isComplited === false) {
+                createElement(todoitem.value, array.indexOf(todoitem))
+                console.log(todoitem.value)
+                
             }
         }
     }
 }
 
 function createElement(text, index) {
-    index = index - 1
     let InpDiv = document.createElement("div")
     InpDiv.className = "InpDiv"
 
@@ -40,12 +48,20 @@ function createElement(text, index) {
     SirclDiv.id = index
     TextDiv.appendChild(SirclDiv)
 
+    if (array[index].isComplited === true) {
+        SirclDiv.style.backgroundColor = "green"
+        TextDiv.style.textDecoration = "line-through solid green 2px"
+    }
     SirclDiv.addEventListener("click", function (e) {
+        left.textContent = +1
         let itemIndex = e.target.id
         array[itemIndex].isComplited = true
-        SirclDiv.style.backgroundColor = "red"
+        array[itemIndex].value
+
+
         localStorage.setItem("LocalInput", JSON.stringify(array))
-        filterfunc()
+        filterfunc("Complite")
+        console.log(array)
 
     })
 
@@ -54,6 +70,7 @@ function createElement(text, index) {
     h3.textContent = text
     h3.className = "h3text"
     h3.style.color = "white"
+
     TextDiv.appendChild(h3)
 
     InpDiv.appendChild(TextDiv)
@@ -72,12 +89,12 @@ function createElement(text, index) {
 
     deleteimg.addEventListener("click", function () {
         InpDiv.remove()
-        array = array.filter((elemnt) => {
-            return elemnt !== h3.textContent
+        array = array.filter((lmnt) => {
+            return lmnt.value !== h3.textContent
 
 
         })
-
+        
         localStorage.setItem("LocalInput", JSON.stringify(array))
         right.textContent = array.length
 
@@ -109,9 +126,9 @@ form.addEventListener("submit", function (e) {
     array.push(todoItem)
     localStorage.setItem("LocalInput", JSON.stringify(array))
 
-    createElement(todoItem.value, array.length)
+    createElement(todoItem.value, array.length - 1)
     right.textContent = array.length
-
+    console.log(array.length)
     form.reset()
 })
 
@@ -144,7 +161,7 @@ DeleteOll.addEventListener("click", function () {
 todofilter.addEventListener("change", function () {
     console.log(todofilter.value)
     localStorage.setItem("filter", todofilter.value)
-    filterfunc()
+    filterfunc(todofilter.value)
     // if (todofilter.value === "completed-task") {
     //     for (let i in array) {
     //         if (array[i].isComplited === true) {
