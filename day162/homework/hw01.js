@@ -9,7 +9,7 @@ let array = JSON.parse(localStorage.getItem("LocalInput")) || []
 let filter = localStorage.getItem("filter") || "tasks"
 
 right.textContent = array.length
-let complitedArray = array.filter((item) =>{
+let complitedArray = array.filter((item) => {
     return item.isComplited === true
 })
 
@@ -22,7 +22,7 @@ function filterfunc(filtertype) {
             if (todoitem.isComplited === true) {
                 createElement(todoitem.value, array.indexOf(todoitem))
                 console.log(todoitem.value)
-                
+
             }
         }
     } else {
@@ -30,7 +30,7 @@ function filterfunc(filtertype) {
             if (todoitem.isComplited === false) {
                 createElement(todoitem.value, array.indexOf(todoitem))
                 console.log(todoitem.value)
-                
+
             }
         }
     }
@@ -61,7 +61,13 @@ function createElement(text, index) {
 
         localStorage.setItem("LocalInput", JSON.stringify(array))
         filterfunc("Complite")
+
         console.log(array)
+        let complitedArray = array.filter((item) => {
+            return item.isComplited === true
+        })
+
+        left.textContent = complitedArray.length
 
     })
 
@@ -94,7 +100,7 @@ function createElement(text, index) {
 
 
         })
-        
+
         localStorage.setItem("LocalInput", JSON.stringify(array))
         right.textContent = array.length
 
