@@ -4,6 +4,9 @@ let left = document.getElementById("left")
 let right = document.getElementById("right")
 let DeleteOll = document.getElementById("DeleteOll")
 let todofilter = document.getElementById("todofilter")
+let editDiv = document.getElementById("editDiv")
+let editIMG2 = document.getElementById("editIMG2")
+let editInput = document.getElementById("editInput")
 
 let array = JSON.parse(localStorage.getItem("LocalInput")) || []
 let filter = localStorage.getItem("filter") || "tasks"
@@ -14,6 +17,8 @@ let complitedArray = array.filter((item) => {
 })
 
 left.textContent = complitedArray.length
+
+let id = 0
 
 function filterfunc(filtertype) {
     AddDiv.innerHTML = ""
@@ -40,7 +45,6 @@ function createElement(text, index) {
     let InpDiv = document.createElement("div")
     InpDiv.className = "InpDiv"
 
-
     let TextDiv = document.createElement("div")
     TextDiv.className = "TextDiv"
     let SirclDiv = document.createElement("div")
@@ -58,7 +62,6 @@ function createElement(text, index) {
         array[itemIndex].isComplited = true
         array[itemIndex].value
 
-
         localStorage.setItem("LocalInput", JSON.stringify(array))
         filterfunc("Complite")
 
@@ -71,7 +74,6 @@ function createElement(text, index) {
 
     })
 
-
     let h3 = document.createElement("h3")
     h3.textContent = text
     h3.className = "h3text"
@@ -81,13 +83,12 @@ function createElement(text, index) {
 
     InpDiv.appendChild(TextDiv)
 
-
-
     let imgdiv = document.createElement("div")
     imgdiv.className = "imgdiv"
 
     let editimg = document.createElement("img")
     editimg.src = "img/edit.png"
+    editimg.id = index
     editimg.className = "editimg"
     let deleteimg = document.createElement("img")
     deleteimg.src = "img/delete.png"
@@ -103,7 +104,33 @@ function createElement(text, index) {
 
         localStorage.setItem("LocalInput", JSON.stringify(array))
         right.textContent = array.length
+        let complitedArray = array.filter((item) => {
+            return item.isComplited === true
+        })
 
+        left.textContent = complitedArray.length
+
+    })
+
+    editimg.addEventListener("click", function (e) {
+        editDiv.style.display = "flex"
+        id = e.target.id
+        console.log(id)
+    })
+    editIMG2.addEventListener("click", function (e) {
+
+        editDiv.style.display = "none"
+        
+        console.log(array[id].value)
+
+        let textcon = editInput.value
+
+        array[id].value = textcon
+        console.log(array)
+       
+        localStorage.setItem("LocalInput", JSON.stringify(array))
+  
+        filterfunc("fi")
     })
 
     imgdiv.appendChild(editimg)
@@ -117,7 +144,6 @@ function createElement(text, index) {
 
 
 }
-
 
 form.addEventListener("submit", function (e) {
     e.preventDefault()
@@ -141,44 +167,18 @@ form.addEventListener("submit", function (e) {
 
 filterfunc()
 
-// if (filter === "completed-task") {
-//     for (let i in array) {
-//         if (array[i].isComplited === true) {
-//             createElement(array[i].value, i)
-//         }
-//     }
-// } else {
-//     for (let i in array) {
-//         if (array[i].isComplited === false) {
-//             createElement(array[i].value, i)
-//         }
-//     }
-// }
-
 DeleteOll.addEventListener("click", function () {
     array = []
     localStorage.setItem("LocalInput", JSON.stringify(array))
     AddDiv.innerHTML = ""
+    right.textContent = array.length
+    left.textContent = complitedArray.length
 
 })
-
-
 
 todofilter.addEventListener("change", function () {
     console.log(todofilter.value)
     localStorage.setItem("filter", todofilter.value)
     filterfunc(todofilter.value)
-    // if (todofilter.value === "completed-task") {
-    //     for (let i in array) {
-    //         if (array[i].isComplited === true) {
-    //             createElement(array[i].value, i)
-    //         }
-    //     }
-    // } else {
-    //     for (let i in array) {
-    //         if (array[i].isComplited === false) {
-    //             createElement(array[i].value, i)
-    //         }
-    //     }
-    // }
+    
 })
