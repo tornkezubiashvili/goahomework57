@@ -6,6 +6,7 @@ function getDataFromBackend(city) {
     let http = new XMLHttpRequest()
     let api = `https:api.weatherapi.com/v1/current.json?key=c8ced2d4f4a741e597a174639260106&q=${city}&aqi=no`
 
+    
     http.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let response = JSON.parse(this.responseText)
@@ -16,11 +17,7 @@ function getDataFromBackend(city) {
 
 
         }
-
-
-
     }
-
     http.open("GET", api)
     http.send()
 }
