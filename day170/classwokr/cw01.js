@@ -1,6 +1,5 @@
 // 1) შექმენით ფუნქცია რომელიც ასინქრონულად დააბრუნებს მონაცემბს(მონაცემი იქნება ამინდის პროგნოზი), ამ ფუნქციას გადაეცემა callback რომელიც მიიღებს არგუმენტად ამინდის პროგნოზის მონაცემს და გამოსახავს შესაბამის რჩევას
 
-func(weather)
 
 function weather(obj) {
     if (obj === "Sunny") {
@@ -17,5 +16,7 @@ function weather(obj) {
 function func(callback){
     setTimeout(() => {
         callback("Clody")
-    })
+    },2000)
 }
+
+func(weather)
