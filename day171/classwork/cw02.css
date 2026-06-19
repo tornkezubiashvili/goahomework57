@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mainDiv div{
+    display: flex;
+    gap: 30px;
+}
