@@ -7,52 +7,6 @@ let temperatureF = document.getElementById("temperatureF")
 let data = document.getElementById("data")
 let cloud = document.getElementById("loud")
 
-
-function getDataFromBackend(city) {
-    let http = new XMLHttpRequest()
-    let api = `https:api.weatherapi.com/v1/current.json?key=c8ced2d4f4a741e597a174639260106&q=${city}&aqi=no`
-
-
-    http.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            let response = JSON.parse(this.responseText)
-            temperature.textContent = `${response.current.temp_c}°`
-            temperatureC.textContent = `${response.current.temp_c}°`
-            temperatureF.textContent = `${response.current.temp_f}°`
-            data.textContent = response.location.localtime
-            cloud.textContent = `${response.current.cloud}%`
-            // weather.textContent = `${response.current.condition.text}`
-
-
-
-            console.log(response)
-
-
-        }
-    }
-    http.open("GET", api)
-    http.send()
-}
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault()
-    let city = e.target.city.value
-    cityName.textContent = city
-    getDataFromBackend(city)
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
 let profilePromise = new Promise((resolve, reject) => {
 
 
@@ -63,29 +17,30 @@ let profilePromise = new Promise((resolve, reject) => {
 
 
         http.onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                let response = JSON.parse(this.responseText)
+            if (this.readyState === 4) {
 
-                // weather.textContent = `${response.current.condition.text}`
-
-
-                setTimeout(() => {
-                    let weatherInfo = {
-                        temp: `${response.current.temp_c}°`,
-                        tempC: `${response.current.temp_c}°`,
-                        tempF: `${response.current.temp_f}°`,
-                        location: `${response.location.localtime}°`,
-                        cloudd: `${response.current.cloud}%`,
-                        weatherr: `${response.current.condition.text}`
-                    }
-                    resolve(weatherInfo)
-                }, 2000)
-
-                console.log(response)
+                if (this.status === 200) {
 
 
-            } else {
-                reject("something wrong with the app.")
+                    let response = JSON.parse(this.responseText)
+
+                    setTimeout(() => {
+                        let weatherInfo = {
+                            temp: `${response.current.temp_c}°`,
+                            tempC: `${response.current.temp_c}°`,
+                            tempF: `${response.current.temp_f}°`,
+                            location: `${response.location.localtime}°`,
+                            cloudd: `${response.current.cloud}%`,
+                            weatherr: `${response.current.condition.text}`
+                        }
+                        resolve(weatherInfo)
+                    }, 2000)
+
+                    console.log(response)
+                } else {
+                    reject("something wrong with the app.")
+                }
+
             }
         }
         http.open("GET", api)
