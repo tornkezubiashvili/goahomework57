@@ -1,10 +1,7 @@
 // ნებისმიერი api ის გამოყენებით ააწყვეთ მინი პროექტი სადა გამოიყენებთ async await და try catch ბლოკებს
 
-
 let form = document.getElementById("form")
 let p = document.getElementById("p")
-
-
 
 try{
     async function api() {
@@ -23,7 +20,7 @@ try{
             }
            
         })
-        
+        console.log(data)
     }
     api()
 
