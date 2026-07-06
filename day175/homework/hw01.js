@@ -13,10 +13,15 @@ try{
         form.addEventListener("submit",function(e){
             e.preventDefault()
             let input = e.target.search.value
+            let amount = e.target.amount.value
             let text = input.toUpperCase()
             let apiText = data.conversion_rates[text]
-            
-            p.textContent = `${text} : ${apiText}`
+            if(amount.length > 0){
+               p.textContent = amount * apiText
+            }else{
+                p.textContent = `${text} : ${apiText}`
+            }
+           
         })
         
     }
