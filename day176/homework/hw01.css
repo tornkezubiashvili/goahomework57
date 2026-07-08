@@ -1,75 +1,119 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
 }
-header{
+
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 50px;
     background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-between;
 }
-.shoptitle{
+
+.shoptitle {
     color: white;
     cursor: pointer;
 }
-form input{
-    width: 500px;
-    height: 40px;
+
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
     border-radius: 30px;
     border: none;
-    cursor: pointer;
     padding: 0px 20px;
-    font-size: 18px;
 }
-.buttonDiv{
+#form button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+form input {
+    width: 500px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px solid white;
+    
+}
+form input:focus {
+    outline: none;
+}
+
+.buttonDiv {
     display: flex;
     gap: 30px;
     align-items: center;
     justify-content: center;
 }
-.buttonDiv button{
+
+.buttonDiv button {
     width: 120px;
     height: 40px;
     border-radius: 20px;
     border: none;
     font-size: 18px;
 }
-main{
+
+main {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
+    flex-direction: column;
     padding: 130px;
     justify-content: center;
+    gap: 120px;
 }
-#section1{
+
+#section1 {
     width: 100%;
     display: flex;
     gap: 120px;
     flex-wrap: wrap;
+    align-items: center;
 }
-.items{
+
+#section2 {
+    width: 100%;
+    display: flex;
+    gap: 120px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.items {
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
-#img{
+
+#img {
     width: 200px;
     height: 230px;
 }
-.description{
+
+.description {
     width: 300px;
 
     display: flex;
@@ -79,6 +123,7 @@ main{
     justify-content: center;
 
 }
-.p{
+
+.p {
     width: 300px;
 }
