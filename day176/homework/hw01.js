@@ -1,6 +1,7 @@
 let section1 = document.getElementById("section1")
 let section2 = document.getElementById("section2")
 let form = document.getElementById("form")
+let main = document.getElementById("main")
 
 
 async function api1() {
@@ -26,6 +27,7 @@ async function api1() {
             section2.innerHTML = ""
             for (let i of data) {
                 if (serch.toLowerCase() === i.category) {
+
                     section1.innerHTML += ` <div        class="items">
                         <a href="cw05.html"><img id="img" src="${i.image}" alt=""></a>
                     <div class="description">
@@ -75,6 +77,7 @@ async function api2() {
             section2.innerHTML = ""
             for (let i of data2.products) {
                 if (serch2.toLowerCase() === i.category) {
+
                     section2.innerHTML += ` <div class="items">
                     <a href="cw05.html"><img id="img" src="${i.images}" alt=""></a>
                     <div class="description">
@@ -83,7 +86,7 @@ async function api2() {
                     <p id="description" class="p">${i.description}</p>
                     <p class="p" id="price"> $${i.price}</p>
                     </div>
-             </div>`
+                    </div>`
                 }
             }
         })
