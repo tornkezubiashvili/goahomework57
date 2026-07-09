@@ -23,8 +23,11 @@ async function api1() {
         form.addEventListener("submit", function (e) {
             e.preventDefault()
             let serch = e.target.search.value
-            section1.innerHTML = ""
-            section2.innerHTML = ""
+            main.innerHTML = ""
+
+            let newSection1 = document.createElement(section)
+            
+            
             for (let i of data) {
                 if (serch.toLowerCase() === i.category) {
 
