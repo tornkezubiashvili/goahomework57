@@ -44,6 +44,7 @@ async function api1() {
             section1.innerHTML = ""
             section2.innerHTML = ""
             for (let i of data) {
+
                 if (serch.toLowerCase() === i.category) {
                     section1.innerHTML += ` <div        class="items">
                         <a href="cw05.html"><img id="img" src="${i.image}" alt=""></a>
@@ -58,13 +59,15 @@ async function api1() {
             }
             for (let j of data2.products) {
                 if (serch.toLowerCase() === j.category) {
+
+                    console.log(j)
                     section2.innerHTML += ` <div class="items">
-                            <a href="cw05.html"><img id="img" src="${i.images}" alt=""></a>
+                            <a href="cw05.html"><img id="img" src="${j.images}" alt=""></a>
                             <div class="description">
                             <p class="p" id="title">
-                            ${i.title}</p>
-                            <p id="description" class="p">${i.description}</p>
-                            <p class="p" id="price"> $${i.price}</p>
+                            ${j.title}</p>
+                            <p id="description" class="p">${j.description}</p>
+                            <p class="p" id="price"> $${j.price}</p>
                             </div>
                             </div>`
                 }
@@ -78,49 +81,3 @@ async function api1() {
 }
 api1()
 
-
-
-async function api2() {
-    try {
-        let response2 = await fetch("https://dummyjson.com/products")
-        let data2 = await response2.json()
-
-        for (let i of data2.products) {
-            section2.innerHTML += ` <div class="items">
-            <a href="cw05.html"><img id="img" src="${i.images}" alt=""></a>
-                <div class="description">
-                    <p class="p" id="title">
-                    ${i.title}</p>
-                    <p id="description" class="p">${i.description}</p>
-                    <p class="p" id="price"> $${i.price}</p>
-                </div>
-            </div>`
-
-            console.log(i.category)
-        }
-
-        form.addEventListener("submit", function (e) {
-            e.preventDefault()
-            let serch2 = e.target.search.value
-            section1.innerHTML = ""
-            section2.innerHTML = ""
-            for (let i of data2.products) {
-                if (serch2.toLowerCase() === i.category) {
-                    section2.innerHTML += ` <div class="items">
-                    <a href="cw05.html"><img id="img" src="${i.images}" alt=""></a>
-                    <div class="description">
-                    <p class="p" id="title">
-                    ${i.title}</p>
-                    <p id="description" class="p">${i.description}</p>
-                    <p class="p" id="price"> $${i.price}</p>
-                    </div>
-                    </div>`
-                }
-            }
-        })
-
-
-    } catch (error) {
-        console.log(error)
-    }
-}
