@@ -28,7 +28,7 @@ header {
     cursor: pointer;
 }
 
-#form{
+#form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,11 +37,12 @@ header {
     border: none;
     padding: 0px 20px;
 }
-#form button{
+
+#form button {
     border: none;
     background-color: white;
     cursor: pointer;
-    
+
 }
 
 form input {
@@ -52,8 +53,9 @@ form input {
     font-size: 18px;
     border-radius: 30px;
     border: 1px solid white;
-    
+
 }
+
 form input:focus {
     outline: none;
 }
@@ -89,6 +91,7 @@ main {
     gap: 120px;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 #section2 {
@@ -97,20 +100,27 @@ main {
     gap: 120px;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 
 .items {
-    width: 300px;
+    width: 350px;
+    height: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    background-color: rgb(80, 80, 80);
+    padding: 20px 60px;
+
+    border-radius: 20px;
 }
 
 #img {
-    width: 200px;
-    height: 230px;
+    width: 150px;
+    height: 190px;
+    cursor: pointer;
 }
 
 .description {
@@ -125,4 +135,20 @@ main {
 
 .p {
     width: 300px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+
+}
+.itemsButton{
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid white;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: gray;
+
 }
