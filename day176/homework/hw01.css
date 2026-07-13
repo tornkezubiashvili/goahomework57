@@ -152,3 +152,19 @@ main {
     background-color: gray;
 
 }
+.formDiv{
+    display: flex;
+    gap: 20px;
+}
+#select{
+    width: 100px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+}
+#select2{
+    width: 100px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+}
