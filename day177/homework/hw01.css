@@ -83,9 +83,10 @@ main{
     margin-top: 100px;
 }
 .mainDiv{
-    width: 400px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 .imgDiv{
@@ -94,7 +95,7 @@ main{
     gap: 10px;
 }
 .imgDiv a{
-    width: 400px;
+    width: 500px;
     background-color: red;
     display: flex;
     align-items: center;
@@ -102,8 +103,8 @@ main{
     border-radius: 20px;
 }
 #foodIMG{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     border-radius: 10px;
 
 }
@@ -117,11 +118,23 @@ main{
     gap: 10px;
 }
 .Foodinfo p {
-    max-width: 390px;
+    max-width: 700px;
     line-height: 21px;
 }
 #Instructions button{
     border: none;
     color: rgb(86, 86, 86);
     cursor: pointer;
+}
+.titlediv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#ingredientDiv{
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
