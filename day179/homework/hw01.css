@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+header{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: black;
+}
+header h1{
+    color: white;
+}
+#form{
+    width: 600px;
+    height: 50px;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    
+}
+#form input{
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color:white;
+    color: black;
+    outline: none;
+    font-size: 16px;
+    
+}
+
+#form button{
+    width: 100px;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.headerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.headerDiv button{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+#section1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.mainDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.imgDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.imgDiv a{
+    width: 500px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+#foodIMG{
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+
+}
+#YouTubeIMG{
+    width: 60px;
+    height: 60px;
+}
+.Foodinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Foodinfo p {
+    max-width: 700px;
+    line-height: 21px;
+}
+#Instructions button{
+    border: none;
+    color: rgb(86, 86, 86);
+    cursor: pointer;
+}
+.titlediv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#ingredientDiv{
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
