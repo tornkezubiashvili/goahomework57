@@ -13,7 +13,16 @@ function Home() {
 
             <img src="https://scontent.ftbs9-1.fna.fbcdn.net/v/t39.99422-6/763003862_27631410699861308_4882583441601901545_n.png?stp=dst-jpg_tt6&cstp=mx1538x2048&ctp=s590x590&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHyQHjZJqDesV7N6jOQr1hqNna4E1avyas2drgTVq_JqwDECoJHegb9Y-waBf7kFBU-b3-r1FN1hb3KYQOjCFOB&_nc_ohc=xo--G6VDwyYQ7kNvwGrGDmb&_nc_oc=Adrjh68jMHEued8VRijTvthGxs0n1sAmquhCDI2Eyg2u1TQD6gS1PXVO3X_5TlgWN8M&_nc_zt=14&_nc_ht=scontent.ftbs9-1.fna&_nc_gid=6D0lnqCBg1FBEF6sA-RmvQ&_nc_ss=7b2a8&oh=00_AQHuUVf65OZBf78nQ9wjg-ie9c8DBMHcqIYtW4Fp5c6ZwA&oe=6A7FF8AB" alt="" />
 
-            <Card/>
+            <div className='divbox'>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </div>
+
 
         </div>
     )

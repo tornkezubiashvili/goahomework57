@@ -38,3 +38,6 @@ img{
     justify-content: center;
 
 }
+.divbox{
+    display: flex;
+}
