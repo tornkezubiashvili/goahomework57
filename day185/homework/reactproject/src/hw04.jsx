@@ -2,7 +2,7 @@
 
 function Box(props){
     return(
-        <div></div>
+        <div style={{ width:"100px", height: "100px", backgroundColor: props.color}}></div>
     )
 }
 export default Box
