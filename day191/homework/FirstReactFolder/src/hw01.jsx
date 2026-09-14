@@ -10,16 +10,18 @@ function Hw01() {
     ];
 
 
-    let elements = products.map(items =>{
+    let elements = products.map(items => {
         <div key={elements.id}>
             <p id={elements.id}>{items.name}</p>
             <p id={elements.id}>{items.price}</p>
             <p id={elements.id}>{items.category}</p>
         </div>
     })
-    
-    return(
-        elements
+
+    return (
+        <>
+            <p>54645</p>
+        </>
     )
 }
 export default Hw01
