@@ -1,6 +1,7 @@
 import Usercard from "./component/UserCard"
 import Productcard from "./component/ProductCard"
 import StudentsList from "./component/StudentList"
+import StudentCard from "./component/StudentCard"
 
 
 function App() {
@@ -42,7 +43,8 @@ function App() {
         <>
             <Usercard name={user.name} age={user.age} city={user.city} />
             <Productcard name={product.name} price={product.price} category={product.category} inStock={product.category} />
-            <StudentsList students = {students}/>
+            <StudentsList name = {students}/>
+            <StudentCard/>
 
         </>
     )

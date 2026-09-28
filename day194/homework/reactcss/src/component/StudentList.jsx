@@ -1,13 +1,22 @@
 import StudentCard from "./StudentCard"
 
-function StudentsList(props){
-   
-    return(
-        <>
-            {props.map((student) =>
-                <StudentCard name = {student.name} age ={student.age} grade = {student.grade}/>
-            )}
-        </>
+function StudentsList(props) {
+
+    return (
+        // console.log(props.name[0])
+        // <>
+
+        //     {props.name[0].map((student) =>
+        //         console.log(student)
+        //     )}
+        // </>
+
+
+    
+            props[0].map(student =>
+                console.log(student)
+            )
+        
     )
 }
 

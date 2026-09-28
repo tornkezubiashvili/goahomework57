@@ -1,5 +1,5 @@
-function StudentCard({name,age,grade}){
-    console.log(name)
+function StudentCard(props){
+    // console.log(props)
 }   
 
 export default StudentCard
