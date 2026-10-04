@@ -1,23 +1,22 @@
 import StudentCard from "./StudentCard"
 
-function StudentsList(props) {
+function StudentsList({name}) {
 
-    // return (
-    //     // console.log(props.name[0])
-    //     // <>
-
-    //     //     {props.name[0].map((student) =>
-    //     //         console.log(student)
-    //     //     )}
-    //     // </>
-
-
-    
-    //         // props[0].map(student =>
-    //         //     console.log(student)
-    //         // )
+    return (
+       <>
+            {
+                name.map(items =>{
+                    <StudentCard 
+                        key={items.id}
+                        name={items.name}
+                        age={items.age}
+                        grade={items.grade}
+                    />
+                })
+            }
+       </>
         
-    // )
+    )
 }
 
 export default StudentsList

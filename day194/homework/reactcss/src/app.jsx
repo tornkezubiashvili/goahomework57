@@ -77,7 +77,7 @@ function App() {
     return (
         <>
             <Usercard name={user.name} age={user.age} city={user.city} />
-            <Productcard name={product.name} price={product.price} category={product.category} inStock={product.category} />
+            <Productcard name={product.name} price={product.price} category={product.category} inStock={product.inStock} />
             <StudentsList name={students} />
             <StudentCard />
             <User name={namee} age={age} />
