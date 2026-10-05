@@ -1,3 +1,5 @@
+import Header from "./component/Header";
+
 function App() {
 
     const movies = [
@@ -36,6 +38,7 @@ function App() {
     ];
     return (
         <>
+            <Header />
 
 
         </>
