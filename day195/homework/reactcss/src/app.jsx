@@ -1,4 +1,6 @@
 import Header from "./component/Header";
+import MovieCard from "./component/MovieCard";
+import MovieList from "./component/MovieList";
 
 function App() {
 
@@ -39,6 +41,8 @@ function App() {
     return (
         <>
             <Header />
+            <MovieList info = {movies}/>
+            <MovieCard/>
 
 
         </>

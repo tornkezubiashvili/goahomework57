@@ -1,12 +1,12 @@
 import StudentCard from "./StudentCard"
 
-function StudentsList({name}) {
+function StudentsList({ name }) {
 
     return (
-       <>
+        <>
             {
-                name.map(items =>{
-                    <StudentCard 
+                name.map(items => {
+                    <StudentCard
                         key={items.id}
                         name={items.name}
                         age={items.age}
@@ -14,8 +14,8 @@ function StudentsList({name}) {
                     />
                 })
             }
-       </>
-        
+        </>
+
     )
 }
 
