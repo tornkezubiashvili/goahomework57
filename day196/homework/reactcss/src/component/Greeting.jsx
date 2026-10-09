@@ -3,11 +3,7 @@ import React from 'react'
 function Greeting({ name, showMessage, setShowMessage }) {
 
     function Message() {
-        if (showMessage === false) {
-            setShowMessage(true)
-        } else {
-            setShowMessage(false)
-        }
+        setShowMessage(!showMessage)
     }
     return (
         <>

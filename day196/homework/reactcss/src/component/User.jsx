@@ -4,11 +4,7 @@ import { useState } from 'react'
 function User({ name, status, state }) {
 
     function func() {
-        if (status === false) {
-            state(true)
-        } else {
-            state(false)
-        }
+        state(!status)
     }
     return (
         <>

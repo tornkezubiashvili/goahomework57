@@ -6,11 +6,7 @@ function Hw06() {
     const[Favorites,useFavorites] = useState(false)
 
     function Bollean(){
-        if(Favorites === false){
-            useFavorites(true)
-        } else{
-            useFavorites(false)
-        }
+        useFavorites(!Favorites)
     }
     return (
         <>

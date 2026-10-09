@@ -10,7 +10,6 @@ function Product({ name, price, count, setCount }) {
             <h1>price: {price}</h1>
             <h1>Quantity:{count}</h1>
             <button onClick={Add}>Add</button>
-
             <h1>-------------------------------</h1 >
         </>
     )
