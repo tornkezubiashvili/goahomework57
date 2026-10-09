@@ -10,6 +10,7 @@ import Hw08 from "./component/Hw08"
 import User from "./component/User"
 import Product from "./component/Product"
 import Counter from "./component/Counter"
+import Greeting from "./component/Greeting"
 
 
 
@@ -17,6 +18,7 @@ function App() {
     const [isOnline, setIsOnline] = useState(false)
     const [count, setCount] = useState(0)
     const [Counterr, setCounter] = useState(0)
+    const [showMessage, setShowMessage] = useState(false);
     return (
         <>
             <Hw01 />
@@ -30,6 +32,7 @@ function App() {
             <User name="Goga" status={isOnline} state={setIsOnline} />
             <Product name="Laptop" price="1200" count={count} setCount={setCount} />
             <Counter count={Counterr} setCounter={setCounter} />
+            <Greeting name="Goga" showMessage={showMessage} setShowMessage={setShowMessage} />
         </>
     )
 }
