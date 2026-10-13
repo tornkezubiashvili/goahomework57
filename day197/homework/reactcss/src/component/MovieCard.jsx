@@ -1,15 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
 
-function MovieCard({ title, genre, price, id, setselectedMovie }) {
+function MovieCard({obj, title, genre, price, key, setselectedMovie }) {
 
   return (
     <>
-      <div key={id.id}>
+      <div key={key}>
         {title}-
         {genre}-
         {price}-
-        <button onClick={() => setselectedMovie(id)}>Select Movie</button>
+        <button onClick={() => setselectedMovie(obj)}>Select Movie</button>
       </div>
     </>
   )

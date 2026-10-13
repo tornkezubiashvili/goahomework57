@@ -7,7 +7,7 @@ function MovieList({ move ,setselectedMovie}) {
     <>
       {
         move.map(items =>
-          <MovieCard title={items.title} genre={items.genre} price={items.price} id={items.id} setselectedMovie={setselectedMovie} />
+          <MovieCard obj={items} title={items.title} genre={items.genre} price={items.price} key={items.id} setselectedMovie={setselectedMovie} />
         )
       }
 

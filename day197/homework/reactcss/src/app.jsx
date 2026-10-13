@@ -15,7 +15,7 @@ function App() {
     return (
         <>
             <MovieList move={movies} setselectedMovie={setselectedMovie} />
-            <SelectedMovie selectedMoviee={selectedMovie}/>
+            <SelectedMovie selectedMovie={selectedMovie}/>
 
         </>
     )
