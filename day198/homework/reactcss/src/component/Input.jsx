@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useState } from "react"
 
 // function Input() {
 //   let array = []
@@ -29,10 +29,10 @@ import React from 'react'
 //   )
 
 // }
-import { useState } from "react";
+
 
 function Input() {
-  const [array, setArray] = useState([]);
+  const [array, setArray] = useState([])
   let showtext = true
 
   console.log(showtext)
@@ -45,13 +45,13 @@ function Input() {
   }
 
   function Add(e) {
-    e.preventDefault();
+    e.preventDefault()
 
-    const value = e.target.input.value;
+    const value = e.target.input.value
 
     if (value.trim() !== "") {
-      setArray([...array, value]);
-      e.target.input.value = "";
+      setArray([...array, value])
+      e.target.input.value = ""
     }
   }
 
