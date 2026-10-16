@@ -1,9 +1,11 @@
 import Input from "./component/Input"
 
+
 function App() {
     return (
         <>
-            <Input/>
+            <Input />
+           
         </>
     )
 }
