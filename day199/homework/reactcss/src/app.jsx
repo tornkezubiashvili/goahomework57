@@ -4,6 +4,7 @@ import Hw05 from "./component/Hw05"
 import Ww06 from "./component/Ww06"
 import Hw07 from "./component/Hw07"
 import Hw08 from "./component/Hw08"
+import Hw09 from "./component/Hw09"
 
 
 
@@ -59,6 +60,7 @@ function App() {
             <Ww06 />
             <Hw07 />
             <Hw08 />
+            <Hw09 />
 
 
 
