@@ -11,6 +11,7 @@ function Hw09() {
     }
     function Clear() {
         setNumbers([])
+        setCounter(0)
     }
     console.log(numbers)
     console.log(counter)

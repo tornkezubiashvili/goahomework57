@@ -14,13 +14,6 @@ function Ww06() {
         setCnfirmPassword(e.target.confirmPassword.value)
     }
 
-    function showText() {
-        if (password === confirmPassword) {
-            <p>{username}/{email}</p>
-        } else {
-            <p>პაროლი ერთმანეთს არ ემთხვევა!</p>
-        }
-    }
     return (
         <>
             <form onSubmit={profileFunc}>

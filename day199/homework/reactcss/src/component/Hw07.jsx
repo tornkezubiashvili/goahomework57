@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function Hw07() {
     const [names, setNames] = useState([])
-    const [name, setName] = useState("")
+   
 
     function Add(e) {
         e.preventDefault()

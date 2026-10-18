@@ -6,11 +6,6 @@ import Hw07 from "./component/Hw07"
 import Hw08 from "./component/Hw08"
 import Hw09 from "./component/Hw09"
 
-
-
-
-
-
 function App() {
     const [name, setName] = useState("")
     const [firstName, setfirstName] = useState("")
@@ -52,8 +47,8 @@ function App() {
             <h1>3-----------------------------</h1>
             <input type="text" value={text} onChange={textFunc} />
             <input type="text" value={title} onChange={titleFunc} />
-            <p>{text.length}{text}</p>
-            <p>{title.length}{title}</p>
+            <p>{text.length} {text}</p>
+            <p>{title.length} {title}</p>
             <h1>4-----------------------------</h1>
             <Hw04 />
             <Hw05 />
