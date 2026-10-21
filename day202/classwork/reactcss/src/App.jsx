@@ -8,14 +8,7 @@ function App() {
     let [shoparry, setShoparry] = useState([])
     let [page, setPage] = useState([])
 
-    for (let i = 0; i < arry.length; i++) {
-        setPage((prev) => {
-            if (i != 10) {
-                return [...prev, arry[i]]
-            }
-        })
-    }
-
+  
 
     function shop(e) {
         let index = e.target.id
