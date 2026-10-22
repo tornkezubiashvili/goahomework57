@@ -6,33 +6,46 @@ function App() {
     let [arry, setArry] = useState([])
     let [showshop, setShowshop] = useState(false)
     let [shoparry, setShoparry] = useState([])
-    let [quantity, setQuantity] = useState([{}])
-    let [count, setCount] = useState([])
+    let [page, setPage] = useState([])
 
-
-
+  
 
     function shop(e) {
         let index = e.target.id
-        setShoparry([...shoparry, arry[index]])
+        setShoparry([...shoparry, { ...arry[index], count: 1 }])
         setShowshop(true)
-        setQuantity([...quantity, { num: 1 }])
+        // setQuantity([...quantity, { num: 1 }])
     }
-    console.log(quantity)
+
 
     function minus(e) {
-        let index = e.target.id
-        // setQuantity([quantity[index] + 1])
+        let index = Number(e.target.id)
+        setShoparry((prev) => {
+            return prev.map((items, id) => index === id ? { ...items, count: items.count - 1 } : items)
+        })
 
 
     }
     function plus(e) {
-        let index = e.target.id
+        let index = Number(e.target.id)
+        setShoparry((prev) => {
+            return prev.map((items, id) => index === id ? { ...items, count: items.count + 1 } : items)
+        })
+        console.log(shoparry[index].count)
 
 
     }
+    function del(e) {
+        let index = Number(e.target.id)
+        setShoparry((prev) => {
+            return prev.filter((item, ind) => ind !== index)
+        })
 
-    console.log(quantity.num + 1)
+    }
+
+
+
+
 
     return (
         <>
@@ -47,15 +60,15 @@ function App() {
                                 <div className="flex gap-4 items-center justify-center">
                                     <div className="flex w-25 p-1 h-8 items-center justify-between border border-green-300">
                                         <button id={index} className="text-green-600 cursor-pointer text-[30px]" onClick={minus}>-</button>
-                                        {/* <p>{quantity[index]}</p> */}
+                                        <p>{shoparry[index].count}</p>
                                         <button id={index} className="text-green-600 cursor-pointer text-[30px]" onClick={plus}>+</button>
                                     </div>
                                     <p>x {items.price}₾</p>
                                 </div>
                             </div>
                             <div className="flex flex-col gap-3 items-center justify-center">
-                                <button className="cursor-pointer">❌️</button>
-                                <p>34534</p>
+                                <button id={index} className="cursor-pointer" onClick={del}>❌️</button>
+                                <p>{shoparry[index].count * items.price} ₾</p>
                             </div>
                         </div>
                     )
