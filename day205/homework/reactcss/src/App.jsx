@@ -1,14 +1,43 @@
 import { useState } from "react"
 import Prouct from "./component/Prouct"
+import { useEffect } from "react"
 
 function App() {
+
 
     let [arry, setArry] = useState([])
     let [showshop, setShowshop] = useState(false)
     let [shoparry, setShoparry] = useState([])
     let [page, setPage] = useState([])
+    let list = []
 
-  
+
+    let fori = 0
+    let forindex = 12
+    useEffect(() => {
+
+        if (arry.length > 0) {
+            for (let j = 0; j < arry.length / 10; j++) {
+                let forarray = []
+
+                for (let i = fori; i < forindex; i++) {
+                    // console.log(arry[i])
+                    // list.push(arry[i])
+                    // setPage((prev) => [...prev, [arry[i]]])
+                    forarray.push(arry[i])
+
+                }
+                setPage((prev) => [...prev, forarray])
+                fori += 10
+                forindex += 10
+            }
+
+        }
+
+    }, [arry])
+
+
+    console.log(page)
 
     function shop(e) {
         let index = e.target.id

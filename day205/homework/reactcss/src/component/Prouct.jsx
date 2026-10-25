@@ -686,34 +686,6 @@ function Prouct({ setArry }) {
             price: "7",
             imgSrc: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
         },
-        {
-            id: 97,
-            title: "პესტოს სოუსი — 190 გ",
-            desc: "ბაზილიკისა და სხვა ინგრედიენტებისგან დამზადებული სოუსი მაკარონისთვის.",
-            price: "7",
-            imgSrc: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc"
-        },
-        {
-            id: 98,
-            title: "ბალზამიკოს ძმარი — 250 მლ",
-            desc: "არომატული ძმარი სალათებისა და მარინადებისთვის.",
-            price: "6",
-            imgSrc: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc"
-        },
-        {
-            id: 99,
-            title: "ვაშლის ძმარი — 500 მლ",
-            desc: "გამოიყენება სალათების შესაკაზმად და მარინადების მოსამზადებლად.",
-            price: "4",
-            imgSrc: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc"
-        },
-        {
-            id: 100,
-            title: "ქოქოსის ფანტელები — 100 გ",
-            desc: "გამოიყენება ნამცხვრების, ორცხობილებისა და დესერტების მოსართავად.",
-            price: "3.50",
-            imgSrc: "https://images.unsplash.com/photo-1518843875459-f738682238a6"
-        }
     ];
 
 }
