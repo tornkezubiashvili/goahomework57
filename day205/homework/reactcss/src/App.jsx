@@ -107,7 +107,7 @@ function App() {
             <div className="grid grid-cols-3 flex-wrap justify-items-center gap-8 max-w-200 ">
                 {
                     arry.map((items, index) =>
-                        <div className="flex flex-col border  -between border-gray-400 w-60 h-auto">
+                        <div className="flex flex-col border flex-wrap  -between border-gray-400 w-60 h-auto">
                             <img src={items.imgSrc} alt="" className="w-60 h-70 object-cover" />
                             <p>{items.title} {items.desc}</p>
 
