@@ -5,6 +5,7 @@ import Object from './Object'
 function Box() {
     let [array, useArray] = useState([])
     console.log(array.title)
+    
     return (
         <>
 
@@ -37,14 +38,9 @@ function Box() {
                         )
                     })
                 }
-
-
             </div>
-
-
             <Object useArray={useArray} />
         </>
-
     )
 }
 

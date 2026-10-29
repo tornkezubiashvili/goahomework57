@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
-body{
+body {
     width: 100%;
     height: 100vh;
     display: flex;
 }
-#root{
+
+#root {
     width: 100%;
     display: flex;
     gap: 150px;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }

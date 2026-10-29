@@ -9,39 +9,181 @@ function App() {
     let [showshop, setShowshop] = useState(false)
     let [shoparry, setShoparry] = useState([])
     let [page, setPage] = useState([])
-    let list = []
+    let [pageindex, setPageindex] = useState(0)
+
 
 
     let fori = 0
     let forindex = 12
-    useEffect(() => {
 
+    useEffect(() => {
         if (arry.length > 0) {
-            for (let j = 0; j < arry.length / 10; j++) {
+            for (let j = 0; j < arry.length / 12; j++) {
                 let forarray = []
 
                 for (let i = fori; i < forindex; i++) {
-                    // console.log(arry[i])
-                    // list.push(arry[i])
-                    // setPage((prev) => [...prev, [arry[i]]])
-                    forarray.push(arry[i])
+                    if (i < arry.length) {
+                        forarray.push(arry[i])
+
+                    }
 
                 }
                 setPage((prev) => [...prev, forarray])
-                fori += 10
-                forindex += 10
+                fori += 12
+                forindex += 12
             }
 
         }
 
     }, [arry])
 
+    function sort() {
+        fori = 0
+        forindex = 12
+        let forarray = []
+        // setPage([])
+        arry.map((items, index) => {
+            for (let i = 0; i < arry.length; i++) {
+                console.log(i)
+                // for (let j = i + 1; i < arry.length; j++) {
+                //     if (i > j) {
+                //         console.log(i)
+                //     }
+                // }
+            }
+        })
+    }
 
-    console.log(page)
+
+    function all() {
+        fori = 0
+        forindex = 12
+        setPage([])
+        if (arry.length > 0) {
+            for (let j = 0; j < arry.length / 12; j++) {
+                let forarray = []
+
+                for (let i = fori; i < forindex; i++) {
+                    if (i < arry.length) {
+                        forarray.push(arry[i])
+
+                    }
+
+                }
+                setPage((prev) => [...prev, forarray])
+                fori += 12
+                forindex += 12
+            }
+
+        }
+    }
+    function Less5() {
+
+        fori = 0
+        forindex = 12
+        let forarray = []
+        setPage([])
+        arry.map((items, index) => {
+            if (items.price <= 5) {
+                forarray.push(arry[index])
+
+            }
+        })
+
+        if (arry.length > 0) {
+            for (let j = 0; j < forarray.length / 12; j++) {
+                let list = []
+
+                for (let i = fori; i < forindex; i++) {
+                    if (i < forarray.length) {
+                        list.push(forarray[i])
+
+                    }
+
+                }
+                setPage((prev) => [...prev, list])
+                fori += 12
+                forindex += 12
+            }
+
+        }
+
+
+    }
+
+    function Less15() {
+
+        fori = 0
+        forindex = 12
+        let forarray = []
+        setPage([])
+        arry.map((items, index) => {
+            if (items.price > 5 && items.price <= 15) {
+                forarray.push(arry[index])
+
+            }
+        })
+
+        if (arry.length > 0) {
+            for (let j = 0; j < forarray.length / 12; j++) {
+                let list = []
+
+                for (let i = fori; i < forindex; i++) {
+                    if (i < forarray.length) {
+                        list.push(forarray[i])
+
+                    }
+
+                }
+                setPage((prev) => [...prev, list])
+                fori += 12
+                forindex += 12
+            }
+
+        }
+
+
+    }
+
+    function Less() {
+
+        fori = 0
+        forindex = 12
+        let forarray = []
+        setPage([])
+        arry.map((items, index) => {
+            if (items.price > 15) {
+                forarray.push(arry[index])
+
+            }
+        })
+
+        if (arry.length > 0) {
+            for (let j = 0; j < forarray.length / 12; j++) {
+                let list = []
+
+                for (let i = fori; i < forindex; i++) {
+                    if (i < forarray.length) {
+                        list.push(forarray[i])
+
+                    }
+
+                }
+                setPage((prev) => [...prev, list])
+                fori += 12
+                forindex += 12
+            }
+
+        }
+
+
+    }
+
+
 
     function shop(e) {
         let index = e.target.id
-        setShoparry([...shoparry, { ...arry[index], count: 1 }])
+        setShoparry([...shoparry, { ...page[pageindex][index], count: 1 }])
         setShowshop(true)
         // setQuantity([...quantity, { num: 1 }])
     }
@@ -73,51 +215,73 @@ function App() {
     }
 
 
-
-
-
     return (
         <>
             <Prouct setArry={setArry} />
-            <div className={`bg-gray-300 w-120 hiden p-3 gap-4 flex flex-col -ml-122.5   ${showshop ? "block" : "hidden"}`} >
-                {
-                    shoparry.map((items, index) =>
-                        <div className="flex items-center justify-between">
-                            <img src={items.imgSrc} alt="" className="w-37.5 h-37.5 object-cover" />
-                            <div className="flex flex-col gap-3">
-                                <p>{items.title}</p>
-                                <div className="flex gap-4 items-center justify-center">
-                                    <div className="flex w-25 p-1 h-8 items-center justify-between border border-green-300">
-                                        <button id={index} className="text-green-600 cursor-pointer text-[30px]" onClick={minus}>-</button>
-                                        <p>{shoparry[index].count}</p>
-                                        <button id={index} className="text-green-600 cursor-pointer text-[30px]" onClick={plus}>+</button>
+            {/* shop box */}
+
+            <div className="flex gap-5 w-195 items-center justify-between">
+                <h1 className="text-[20px] cursor-pointer" onClick={sort}>sort</h1>
+                <div className="flex gap-5">
+                    <h1 className="text-[20px] cursor-pointer" onClick={all}>ALL</h1>
+                    <h1 className="text-[20px] cursor-pointer" onClick={Less5}>-5</h1>
+                    <h1 className="text-[20px] cursor-pointer" onClick={Less15}>5-15</h1>
+                    <h1 className="text-[20px] cursor-pointer" onClick={Less}>15+</h1>
+                </div>
+            </div>
+            <div className="flex gap-38">
+                <div className={`bg-gray-300 w-120 hiden p-3 gap-4 flex flex-col -ml-122.5   ${showshop ? "block" : "hidden"}`} >
+                    {
+                        shoparry.map((items, index) =>
+                            <div className="flex items-center justify-between">
+                                <img src={items.imgSrc} alt="" className="w-37.5 h-37.5 object-cover" />
+                                <div className="flex flex-col gap-3">
+                                    <p>{items.title}</p>
+                                    <div className="flex gap-4 items-center justify-center">
+                                        <div className="flex w-25 p-1 h-8 items-center justify-between border border-green-300">
+                                            <button id={index} className="text-green-600 cursor-pointer text-[30px]" onClick={minus}>-</button>
+                                            <p>{shoparry[index].count}</p>
+                                            <button id={index} className="text-green-600 cursor-pointer text-[30px]" onClick={plus}>+</button>
+                                        </div>
+                                        <p>x {items.price}₾</p>
                                     </div>
-                                    <p>x {items.price}₾</p>
+                                </div>
+                                <div className="flex flex-col gap-3 items-center justify-center">
+                                    <button id={index} className="cursor-pointer" onClick={del}>❌️</button>
+                                    <p>{shoparry[index].count * items.price} ₾</p>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-3 items-center justify-center">
-                                <button id={index} className="cursor-pointer" onClick={del}>❌️</button>
-                                <p>{shoparry[index].count * items.price} ₾</p>
-                            </div>
-                        </div>
-                    )
-                }
+                        )
+                    }
 
-            </div >
-            <div className="grid grid-cols-3 flex-wrap justify-items-center gap-8 max-w-200 ">
+                </div >
+
+
+                <div className="grid grid-cols-3 flex-wrap justify-items-center gap-8 max-w-200 ">
+                    {
+                        page[pageindex]?.map((items, index) =>
+                            <div className="flex flex-col border flex-wrap  -between border-gray-400 w-60 h-auto">
+                                <img src={items.imgSrc} alt="" className="w-60 h-70 object-cover" />
+                                <p>{items.title} {items.desc}</p>
+
+                                <div className="flex justify-between">
+                                    <p className="text-green-600 text-[20px]">{items.price}₾</p>
+                                    <button id={index} className="text-[20px] cursor-pointer" onClick={shop}>🛒</button>
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
+            </div>
+
+            {/* page */}
+            <div className="flex gap-5 cursor-pointer">
                 {
-                    arry.map((items, index) =>
-                        <div className="flex flex-col border flex-wrap  -between border-gray-400 w-60 h-auto">
-                            <img src={items.imgSrc} alt="" className="w-60 h-70 object-cover" />
-                            <p>{items.title} {items.desc}</p>
-
-                            <div className="flex justify-between">
-                                <p className="text-green-600 text-[20px]">{items.price}₾</p>
-                                <button id={index} className="text-[20px] cursor-pointer" onClick={shop}>🛒</button>
-                            </div>
-                        </div>
+                    page.map((items, index) =>
+                        <h1 onClick={() => setPageindex(index)} className="text-[20px]">{index + 1}</h1>
                     )
                 }
+
             </div>
 
 
