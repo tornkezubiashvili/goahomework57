@@ -2,6 +2,7 @@ import { useState } from "react"
 import Prouct from "./component/Prouct"
 import { useEffect } from "react"
 
+
 function App() {
 
 
@@ -10,6 +11,7 @@ function App() {
     let [shoparry, setShoparry] = useState([])
     let [page, setPage] = useState([])
     let [pageindex, setPageindex] = useState(0)
+    let [changSort, setChangSort] = useState("sort")
 
 
 
@@ -38,22 +40,65 @@ function App() {
     }, [arry])
 
     function sort() {
-        fori = 0
-        forindex = 12
-        let forarray = []
-        // setPage([])
-        arry.map((items, index) => {
-            for (let i = 0; i < arry.length; i++) {
-                console.log(i)
-                // for (let j = i + 1; i < arry.length; j++) {
-                //     if (i > j) {
-                //         console.log(i)
-                //     }
-                // }
-            }
-        })
-    }
+        if (changSort === "sort") {
 
+            setPage([])
+            fori = 0
+            forindex = 12
+            let newArr = []
+
+            newArr.push(arry.sort((a, b) => Number(a.price) - Number(b.price)))
+
+            if (arry.length > 0) {
+                for (let j = 0; j < newArr.length / 12; j++) {
+                    let list = []
+
+                    for (let i = fori; i < forindex; i++) {
+                        if (i < newArr.length) {
+                            list.push(newArr[i])
+
+                        }
+
+                    }
+                    setPage((prev) => [...prev, list])
+                    fori += 12
+                    forindex += 12
+                }
+                setChangSort("reversed sort")
+            }
+        } else {
+            setPage([])
+            fori = 0
+            forindex = 12
+            let newArr = []
+
+            newArr.push(arry.sort((a, b) => Number(a.price) - Number(b.price)))
+
+            if (arry.length > 0) {
+                for (let j = 0; j < newArr.length / 12; j++) {
+                    let list = []
+
+                    for (let i = fori; i < forindex; i++) {
+                        if (i < newArr.length) {
+                            list.push(newArr[i])
+                        }
+                    }
+                    setPage(list.reverse())
+                    fori += 12
+                    forindex += 12
+                }
+            }
+            setChangSort("sort")
+
+        }
+
+
+
+
+
+
+    }
+    console.log(page)
 
     function all() {
         fori = 0
@@ -221,7 +266,7 @@ function App() {
             {/* shop box */}
 
             <div className="flex gap-5 w-195 items-center justify-between">
-                <h1 className="text-[20px] cursor-pointer" onClick={sort}>sort</h1>
+                <h1 className="text-[20px] cursor-pointer" onClick={sort}>{changSort}</h1>
                 <div className="flex gap-5">
                     <h1 className="text-[20px] cursor-pointer" onClick={all}>ALL</h1>
                     <h1 className="text-[20px] cursor-pointer" onClick={Less5}>-5</h1>
