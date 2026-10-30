@@ -12,6 +12,7 @@ function App() {
     let [page, setPage] = useState([])
     let [pageindex, setPageindex] = useState(0)
     let [changSort, setChangSort] = useState("sort")
+    let [additems, setAdditems] = useState(false)
 
 
 
@@ -39,6 +40,7 @@ function App() {
 
     }, [arry])
 
+
     function sort() {
         if (changSort === "sort") {
 
@@ -47,7 +49,7 @@ function App() {
             forindex = 12
             let newArr = []
 
-            newArr.push(arry.sort((a, b) => Number(a.price) - Number(b.price)))
+            newArr = [...arry.sort((a, b) => Number(a.price) - Number(b.price))]
 
             if (arry.length > 0) {
                 for (let j = 0; j < newArr.length / 12; j++) {
@@ -56,23 +58,26 @@ function App() {
                     for (let i = fori; i < forindex; i++) {
                         if (i < newArr.length) {
                             list.push(newArr[i])
-
                         }
-
                     }
-                    setPage((prev) => [...prev, list])
+
+                    setPage(prev => [...prev, list])
+
                     fori += 12
                     forindex += 12
                 }
+
                 setChangSort("reversed sort")
             }
+
         } else {
+
             setPage([])
             fori = 0
             forindex = 12
             let newArr = []
 
-            newArr.push(arry.sort((a, b) => Number(a.price) - Number(b.price)))
+            newArr = [...arry.sort((a, b) => Number(a.price) - Number(b.price)).reverse()]
 
             if (arry.length > 0) {
                 for (let j = 0; j < newArr.length / 12; j++) {
@@ -83,22 +88,17 @@ function App() {
                             list.push(newArr[i])
                         }
                     }
-                    setPage(list.reverse())
+
+                    setPage(prev => [...prev, list])
+
                     fori += 12
                     forindex += 12
                 }
             }
+
             setChangSort("sort")
-
         }
-
-
-
-
-
-
     }
-    console.log(page)
 
     function all() {
         fori = 0
@@ -119,9 +119,11 @@ function App() {
                 fori += 12
                 forindex += 12
             }
-
         }
     }
+
+
+
     function Less5() {
 
         fori = 0
@@ -259,6 +261,63 @@ function App() {
 
     }
 
+    function search(e) {
+        let product = []
+        for (let i = 0; i < arry.length; i++) {
+            if (arry[i].title.includes(e.target.value)) {
+                product.push(arry[i])
+            }
+        }
+
+
+        if (product.length > 0) {
+            for (let j = 0; j < product.length / 12; j++) {
+                let list = []
+
+                for (let i = fori; i < forindex; i++) {
+                    if (i < product.length) {
+                        setPage([])
+                        list.push(product[i])
+                    }
+                }
+
+                setPage((prev) => [...prev, list])
+
+                fori += 12
+                forindex += 12
+
+                console.log(page)
+            }
+        }
+
+    }
+
+    function add(e) {
+        e.preventDefault()
+        let count = arry.length
+
+
+        let newItems = {
+            id: count,
+            title: e.target.name.value,
+            desc: e.target.description.value,
+            price: e.target.price.value,
+            imgSrc: e.target.img.value
+        }
+
+        setPage(prev =>
+            prev.map((itmes, index) =>
+                index === prev.length - 1
+                    ? [...itmes, newItems]
+                    : itmes
+            )
+        );
+        count++
+        setAdditems(false)
+
+    }
+    // console.log(page)
+
 
     return (
         <>
@@ -267,13 +326,27 @@ function App() {
 
             <div className="flex gap-5 w-195 items-center justify-between">
                 <h1 className="text-[20px] cursor-pointer" onClick={sort}>{changSort}</h1>
+                <input onChange={search} type="text" placeholder="შეიყვანეთ პროდუქტი" className="border border-gray-700 w-80 p-0.75" />
                 <div className="flex gap-5">
                     <h1 className="text-[20px] cursor-pointer" onClick={all}>ALL</h1>
                     <h1 className="text-[20px] cursor-pointer" onClick={Less5}>-5</h1>
                     <h1 className="text-[20px] cursor-pointer" onClick={Less15}>5-15</h1>
                     <h1 className="text-[20px] cursor-pointer" onClick={Less}>15+</h1>
+                    <h1 className="text-[20px] cursor-pointer" onClick={() => setAdditems(true)}>➕</h1>
                 </div>
             </div>
+            <form onSubmit={add} className={`absolute bg-gray-400 top-60 w-125 h-100 flex flex-col items-center justify-center gap-5 rounded-[20px]  ${additems === true ? "block" : "hidden"}`}>
+                <input type="text" name="img" placeholder="შეიყვანე სურათის URL" className="border border-black-200 w-75 p-1.5 rounded-[20px]" />
+
+                <input type="text" name="name" placeholder="შეიყვანე პროუქტის სახელი" className="border border-black-200 w-75 p-1.5 rounded-[20px]" />
+
+                <input type="text" name="description" placeholder="შეიყვანე პროდუქტის აღწერა" className="border border-black-200 w-75 p-1.5 rounded-[20px]" />
+
+                <input type="number" name="price" placeholder="შეიყვანე პროდუქტის ფასი" className="border border-black-200 w-75 p-1.5 rounded-[20px]" />
+
+                <button type="submit" className="border border-black-200 w-75 p-1.5 rounded-[20px] cursor-pointer">{additems ? "Add items" : "Success"}</button>
+
+            </form>
             <div className="flex gap-38">
                 <div className={`bg-gray-300 w-120 hiden p-3 gap-4 flex flex-col -ml-122.5   ${showshop ? "block" : "hidden"}`} >
                     {
