@@ -4,8 +4,6 @@ import { useEffect } from "react"
 
 
 function App() {
-
-
     let [arry, setArry] = useState([])
     let [showshop, setShowshop] = useState(false)
     let [shoparry, setShoparry] = useState([])
@@ -39,7 +37,6 @@ function App() {
         }
 
     }, [arry])
-
 
     function sort() {
         if (changSort === "sort") {
@@ -122,8 +119,6 @@ function App() {
         }
     }
 
-
-
     function Less5() {
 
         fori = 0
@@ -152,10 +147,7 @@ function App() {
                 fori += 12
                 forindex += 12
             }
-
         }
-
-
     }
 
     function Less15() {
@@ -225,8 +217,6 @@ function App() {
 
 
     }
-
-
 
     function shop(e) {
         let index = e.target.id
@@ -374,7 +364,6 @@ function App() {
 
                 </div >
 
-
                 <div className="grid grid-cols-3 flex-wrap justify-items-center gap-8 max-w-200 ">
                     {
                         page[pageindex]?.map((items, index) =>
@@ -401,11 +390,7 @@ function App() {
                 }
 
             </div>
-
-
         </>
     )
 }
-
 export default App
-
