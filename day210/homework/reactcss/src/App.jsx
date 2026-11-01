@@ -37,6 +37,7 @@ function App() {
         }
 
     }, [arry])
+   
 
     function sort() {
         if (changSort === "sort") {
@@ -212,9 +213,7 @@ function App() {
                 fori += 12
                 forindex += 12
             }
-
         }
-
 
     }
 
@@ -337,7 +336,7 @@ function App() {
                 <button type="submit" className="border border-black-200 w-75 p-1.5 rounded-[20px] cursor-pointer">{additems ? "Add items" : "Success"}</button>
 
             </form>
-            <div className="flex gap-38">
+            <div className="flex gap-38" >
                 <div className={`bg-gray-300 w-120 hiden p-3 gap-4 flex flex-col -ml-122.5   ${showshop ? "block" : "hidden"}`} >
                     {
                         shoparry.map((items, index) =>

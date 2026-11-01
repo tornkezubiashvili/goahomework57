@@ -11,7 +11,7 @@ function App() {
     setInterval(() => {
         let number = Math.floor(Math.random() * (120 - 30 + 1)) + 30;
         setHeart(number)
-    }, 10000);
+    }, 5000);
 
     let array = [
         "../src/assets/img/image2.png",

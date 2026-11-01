@@ -6,6 +6,9 @@ function Prouct({ setArry }) {
     useEffect(() => {
         setArry(productArr);
     }, [])
+    useEffect(()=>{
+        console.log("render")
+    })
     let productArr = [
         {
             id: 0,
