@@ -23,7 +23,7 @@ function App() {
 
     return (
         <>
-            <UserContext.Provider value={obj}>
+            <UserContext.Provider value={[obj?.location.name, obj]}>
                 <Heder />
                 <Main />
                 <Foter />

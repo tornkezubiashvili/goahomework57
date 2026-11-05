@@ -2,7 +2,7 @@ import React from 'react'
 import { UserContext, } from '../src/App';
 import { useContext } from 'react';
 function Weatherbox() {
-    const obj = useContext(UserContext);
+    const [name, obj] = useContext(UserContext);
     return (
         <>
             <div>
