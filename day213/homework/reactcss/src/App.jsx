@@ -1,4 +1,6 @@
+import Foter from "../component/Foter"
 import Heder from "../component/Heder"
+import Main from "../component/main"
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
     return (
         <>
             <Heder />
+            <Main />
+            <Foter />
         </>
     )
 
