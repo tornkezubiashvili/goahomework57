@@ -1,8 +1,11 @@
 import React from 'react'
+import Testfooter from './Testfooter'
 
 function Foter() {
   return (
-    <div>Foter</div>
+    <>
+      <Testfooter/>
+    </>
   )
 }
 
