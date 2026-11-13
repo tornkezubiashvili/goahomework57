@@ -7,10 +7,10 @@ function Nav() {
         <>
             <div className='flex items-center justify-center gap-5'>
                 <Link to='/'>
-                    <button>Home</button>
+                    <button className='text-white cursor-pointer'>Home</button>
                 </Link>
                 <Link to='/History'>
-                    <button>History</button>
+                    <button className='text-white cursor-pointer'>History</button>
                 </Link>
             </div>
 

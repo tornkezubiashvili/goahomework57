@@ -5,16 +5,17 @@ import { useContext } from 'react';
 
 
 function Heder() {
-    const [name, obj] = useContext(UserContext);
+    const [name, obj,setCountry] = useContext(UserContext);
     function serch(e) {
         console.log(e.target.value)
+        setCountry(e.target.value)
     }
     return (
         <>
             <div className='bg-blue-700 w-full flex items-center justify-between px-70 py-5 gap-25'>
                 <div className='flex items-center justify-center'>
                     <h1 className='text-white text-[25px]'>Wether App</h1>
-                    <h1>{name}</h1>
+                    <h1 className='text-white'>{name}</h1>
                 </div>
                 <div className='flex items-center justify-center'>
 

@@ -6,8 +6,9 @@ export const UserContext = createContext();
 
 function Fullpage() {
     const [obj, setObj] = useState()
-    const [country, setCountry] = useState()
-    async function fetchData(country = "tbilisi") {
+    const [country, setCountry] = useState("tbilisi")
+    console.log(country)
+    async function fetchData() {
 
         const url = `https://api.weatherapi.com/v1/current.json?key=94a4fbb3c1224baca5e155006260511&q=${country}`
         const responsi = await fetch(url)
@@ -17,12 +18,12 @@ function Fullpage() {
     }
     useEffect(() => {
         fetchData()
-    }, [])
+    }, [country])
 
 
     return (
         <>
-            <UserContext.Provider value={[obj?.location.name, obj]}>
+            <UserContext.Provider value={[obj?.location.name, obj, setCountry]}>
                 <Heder />
                 <Outlet />
                 <Foter />
