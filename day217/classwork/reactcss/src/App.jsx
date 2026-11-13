@@ -1,25 +1,25 @@
 import { useRef, useState } from "react"
 
 function App() {
-    const [coun, setcoun] = useState(0)
-    let counter = useRef(0)
-
-    function plus() {
-        counter.current += 1
-        setcoun(counter.current)
-    }
-    function minus() {
-        counter.current -= 1
-        setcoun(counter.current)
-    }
 
 
+    let count = useRef()
+    console.log(count)
 
     return (
         <>
-            <button onClick={plus}>+</button>
-            <p>{counter.current}</p>
-            <button onClick={minus}>-</button>
+
+            <button onClick={() => {
+                count.current.textContent = Number(count.current.textContent) + 1
+                console.log(count)
+            }}>+</button>
+
+            <p ref={count}>0</p>
+
+            <button onClick={() => {
+                count.current.textContent = Number(count.current.textContent) - 1
+                console.log(count)
+            }}>-</button>
 
         </>
     )
